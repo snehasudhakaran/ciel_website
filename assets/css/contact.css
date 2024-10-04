@@ -1,0 +1,204 @@
+:root{
+  /* colors */
+
+  --first-color: #31ae90;
+  --title-color: hsl(0,0%,100%);
+  --text-color: hsl(0,0%,80%);
+  --body-color: hsl(0,0%,7%);
+  --container-color: hsl(0,1%,17%);
+  --border-color: hsl(0,0%,15%);
+  --text-white: #fff;
+
+  /* font and typography */
+  
+  --body-font: 'Open Sans', sans-serif;
+  --second-font: 'Poppins', sans-serif;
+
+  --big-font-size: 56px;
+  --h1-font-size: 45px;
+  --h2-font-size: 32px;
+  --large-font-size: 18px;
+  --normal-font-size: 16px;
+  --small-font-size: 15px;
+  --smaller-font-size: 14px;
+  --tiny-font-size: 12px;
+
+  /* Font weight */
+  --weight-400 : 400;
+  --weight-500 : 500;
+  --weight-700 : 700;
+  --weight-800 : 800;
+
+}
+
+.contact__container{
+    grid-template-columns: 6fr 7fr;
+    gap:48px;
+}
+
+.contact__title{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact__description{
+    font-size:15px;
+    line-height: 1.6;
+}
+
+.contact__description,
+.contact__info .info__item{
+    margin-bottom: 20px;
+}
+
+.contact__info .info__item{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.contact__info .info__icon{
+    color:  #31ae90 !important;
+    font-size: var(--h2-font-size);
+}
+
+.contact__info .info__title{
+    font-size: var(--small-font-size);
+}
+
+.contact__info .info__desc{
+    font-family: var(--body-font);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+}
+
+.contact__socials{
+    display:flex;
+    column-gap:16px;
+}
+
+.contact__social-link{
+    background-color: var(--container-color);
+    color: var(--title-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 44px;
+    transition: all 0.3s ease;
+}
+
+.contact__social-link:hover{
+    background-color:  #31ae90;
+    color: var(--text-white)
+}
+
+.form__input-group{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.form__input-div{
+    margin-bottom: 30px;
+}
+
+.form__control{
+    border: 1px solid var(--container-color);
+    background-color: var(--container-color);
+    color: var(--title-color);
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: var(--small-font-size) ;
+    transition: all 0.3s ease;
+}
+
+.form__control:focus{
+    border-color:  #31ae90;
+}
+
+.textarea{
+    resize:none;
+    height: 160px;
+}
+
+.contact__button-icons{
+    font-size: var(--h4-font-size);
+}
+
+.button{
+    display: inline-block;
+    color: var(--title-color);
+    border: 1px solid var(--first-color);
+    padding: 15px 70px 15px 35px;
+    border-radius: 35px;
+    font-family: var(--second-font);
+    font-size: var(--small-font-size);
+    font-weight: var(--weight-500);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .button:hover{
+    color: var(--text-white)
+  }
+  
+  .button::before{
+    content: '';
+    position: absolute;
+    inset:0;
+    background-color: var(--first-color);
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 0.3s ease-out;
+  }
+  
+  .button:hover::before{
+    transform: translateX(0);
+  }
+  
+  .button__icon{
+    background-color: var(--first-color);
+    position: absolute;
+    inset-block: -2px;
+    top:1px;
+    right:1.1px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    color:var(--text-white);
+    font-size: var(--large-font-size);
+    text-align: center;
+    line-height: 57px;
+  }
+
+@media screen and (max-width: 1219px){
+    
+    .contact__container{
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 90px;
+    }
+    
+}
+
+@media screen and (min-device-width:320px) and (max-device-width:588px){
+
+    .style__switcher{
+        display:none;
+    }
+    .form__input-group{
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 30px;
+    }
+    .contact__container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+

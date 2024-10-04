@@ -1,0 +1,85 @@
+{
+  "buttons": [
+    {
+      "label": "Contact Us",
+      "location": "UK",
+      "animation": "fade-up"
+    },
+    {
+      "label": "Contact Us",
+      "location": "India",
+      "animation": "fade-up"
+    },
+    {
+      "label": "Contact Us",
+      "location": "USA",
+      "animation": "fade-down"
+    },
+    {
+      "label": "Contact Us",
+      "location": "UAE",
+      "animation": "fade-down"
+    }
+  ],
+  "marqueeTexts": [
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL",
+    "IT'S TIME TO CREATE A CIEL"
+  ],
+  "location": [
+    {
+      "country": "India",
+      "address": "9101 Maple Road, City, State, 110001",
+      "phone": "+91 98765 43210",
+      "bgColor": "#31ae90",
+      "imgSrc": "./assets/images/India.png"
+    },
+    {
+      "country": "USA",
+      "address": "1234 Elm Street, City, State, 12345",
+      "phone": "+1 (123) 456-7890",
+      "bgColor": "#ff9213",
+      "imgSrc": "./assets/images/USA.png"
+    },
+    {
+      "country": "United Kingdom",
+      "address": "5678 Oak Avenue, City, County, AB12 3CD",
+      "phone": "+44 123 4567 890",
+      "bgColor": "#f25a49",
+      "imgSrc": "./assets/images/UK.png"
+    },
+    {
+      "country": "UAE",
+      "address": "1213 Pine Street, City, Emirate, 123456",
+      "phone": "+971 50 123 4567",
+      "bgColor": "#31ae90",
+      "imgSrc": "./assets/images/UAE.png"
+    }
+  ],
+  "services":[
+    {
+      "title": "Service Title 1",
+      "image": "https://via.placeholder.com/400x200",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae justo scelerisque, interdum massa nec, auctor est."
+    },
+    {
+      "title": "Service Title 2",
+      "image": "https://via.placeholder.com/400x200",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae justo scelerisque, interdum massa nec, auctor est."
+    },
+    {
+      "title": "Service Title 3",
+      "image": "https://via.placeholder.com/400x200",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae justo scelerisque, interdum massa nec, auctor est."
+    }
+  ]
+}

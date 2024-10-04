@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciel</title>
+
+    <!-- Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Juana:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/about.css" />
+
+    <!-- animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+</head>
+
+<body class="text-white">
+    <!-- Header Start -->
+    <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-black  transition-colors duration-300 bg-white">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between" aria-label="Global">
+                <!-- Logo Section -->
+                <div class="flex lg:flex-1">
+                    <a href="/" class="flex items-center">
+                        <img src="./assets/images/logoBlack.png" alt="CIEL Logo" id="logo" class="h-[55px] w-auto">
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex mobile-view-nav-menu">
+                    <button type="button"
+                        class="menu-button inline-flex items-center justify-center rounded-md p-2.5 text-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop Menu Items -->
+                <div class="hidden lg:flex lg:gap-x-12 items-center">
+                    <div class="lg:flex lg:gap-x-12">
+                        <a href="./index.html"
+                            class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
+                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About
+                            us</a>
+                        <a href="#" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Services</a>
+                        <a href="./career.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Career</a>
+                        <a href="./blog.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Blog</a>
+                    </div>
+                    <!-- Contact Button -->
+                    <div>
+                        <a href="./contact.html">
+
+                            <button
+                                class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300 ">
+                                <p class="font-extrabold">Contact Us</p>
+                                <span class="flex items-center font-extrabold">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden mobile-nav hidden" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 z-50 bg-[#0b0219] opacity-80"></div>
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-2 sm:max-w-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <a href="/" class="flex items-center">
+                        <h1 class="text-[#0b0219] text-[30px] font-extrabold">CIEL</h1>
+                    </a>
+                    <button type="button" class="rounded-md text-[#0b0219] menu-close">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root text-[#0b0219]">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="./index.html"
+                                class="block px-3 py-2 rounded-md text-lg font-bold hover:bg-gray-50 hover:text-[#0b0219]">Home</a>
+                            <a href="./about.html"
+                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">About
+                                us</a>
+                            <a href="#"
+                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Services</a>
+                            <a href="./career.html"
+                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Career</a>
+                            <a href="./blog.html"
+                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Banner Section -->
+    <!-- <section
+        class="pt-[150px] md:pt-[150px] lg:pt-[150px] pb-[100px] flex justify-center items-center about-banner-section">
+        <div class="banner-section-info flex justify-center items-center">
+            <div class="banner-header text-center">
+                <h1 class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[45px]">Next-Gen Performance
+                </h1>
+                <p class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[40px]" data-aos="fade-up">
+                    Marketing with </p>
+                <h1 class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[45px]" data-aos="fade-up">
+                    CIEL.AI
+                </h1>
+
+                <div class="flex gap-5 justify-center items-center mt-[50px]">
+                    <button
+                        class="contact-button  bg-[#31ae90] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
+                        <p class="font-medium">Contact Us</p>
+                    </button>
+                    <button
+                        class="contact-button border border-[#FFFFFF] text-[#FFFFFF] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
+                        <p class="font-medium">Contact Us</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Banner Section -->
+
+    <div class="video-background-container relative w-100 ">
+        <video autoplay muted loop class="video-background w-full">
+            <source src="./assets/images/about-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Your content goes here -->
+        <div class="content banner-section-info absolute top-[300px] pb-[100px] w-full flex justify-end px-20">
+            <div class="banner-section-info ">
+                <div class="banner-header text-center">
+                    <h1 class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[45px] " data-aos="flip-right">Next-Gen Performance
+                    </h1>
+                    <p class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[40px]" data-aos="flip-left">
+                        Marketing with </p>
+                    <h1 class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[45px] " data-aos="flip-right">
+                        CIEL.AI
+                    </h1>
+    
+                    <div class="flex gap-5 justify-center items-center mt-[50px]">
+                        <button data-aos="fade-up-left"
+                            class="contact-button  bg-[#31ae90] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
+                            <p class="font-medium">Contact Us</p>
+                        </button>
+                        <button data-aos="fade-up-right"
+                            class="contact-button border border-[#FFFFFF] text-[#FFFFFF] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
+                            <p class="font-medium">Contact Us</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="flex flex-wrap  justify-center gap-10 items-center bg-[#31ae90] about-quotes">
+        <div class=" flex-1 text-[20px] flex justify-center items-center value">
+            <p>We are committed to providing the best quality of service for guaranteed customer satisfaction and
+                long-term success.</p>
+        </div>
+        <div
+            class="flex-2 bg-white text-black py-4 justify-center items-center px-6 flex justify-center items-center border-2">
+            <button class="cursor-pointer text-[20px] font-semibold">Contact Us</button>
+        </div>
+    </section>
+
+    <!-- About us -->
+    <section class="px-8 bg-white text-black py-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 container mx-auto">
+            <div>
+                <img src="./assets/images/about-us.png" class="rounded shadow-xl hover-shadow" />
+            </div>
+            <div class="flex flex-col gap-y-4">
+                
+                <h1 class=" font-bold text-[#31ae90] text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px]">About us </h1>
+                <p class="">At Ciel, we are more than just a digital marketing agency—we are your strategic partner in growth. With years of experience in the ever-evolving digital landscape, we understand that each business is unique and requires a tailored approach to stand out. Our team of passionate marketers, strategists, and creatives work collaboratively to design customized marketing solutions that not only boost your online presence but also deliver tangible, measurable results.
+                <p>
+                    From innovative social media campaigns and search engine optimization to data-driven paid advertising strategies, we combine creativity with analytics to help your brand achieve sustainable growth. 
+                </p> 
+                        
+                </p>
+                <p><span class="font-bold">Our mission is simple:</span> to help businesses of all sizes navigate the complexities of the digital world, drive meaningful engagement, and ultimately convert opportunities into long-term success.</p>
+
+                <!-- <p>We believe in building relationships that go beyond the typical client-vendor dynamic. Through transparency, consistent communication, and a deep understanding of your business goals, we aim to foster trust and deliver solutions that drive meaningful impact. </p> -->
+            </div>
+        </div>
+    </section>
+    <!-- About us -->
+
+    <!-- our story -->
+    <div class="container mx-auto mt-20">
+        <p class="uppercase text-white text-center font-medium ">Our Story</p>
+                <h1 class=" font-bold text-center text-white text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px]">How it started </h1>
+       <div class="timeline text-black">
+
+        <div class="container left-container">
+            <div class="timeline-circle flex justify-center items-center text-white font-bold " data-aos="fade-down">
+                <h1>1</h1>
+            </div>
+            <div class="txt-box" data-aos="fade-up">
+                <h2>Why We Started</h2>
+                <p>Our journey began with a shared passion for digital landscapes. As tech geeks we found ourselves critiquing other businesses websites.</p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+
+        <div class="container right-container">
+            <div class="timeline-circle flex justify-center items-center font-bold text-white" data-aos="fade-down">
+                <h1>2</h1>
+            </div>
+            <div class="txt-box" data-aos="fade-up">
+                <h2>Founding Story</h2>
+                <p>From a small University dorm room, we embarked on a journey. Armed with laptops and late-night brainstorming sessions, we set out to create a web design/development agency that not only delivered exceptional results but also prioritized client satisfaction and innovation. </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+
+        <div class="container left-container">
+            <div class="timeline-circle flex justify-center items-center font-bold text-white" data-aos="fade-down">
+                <h1>3</h1>
+            </div>
+            <div class="txt-box" data-aos="fade-up">
+                <h2>Initial Milestones
+                </h2>
+                <p>The early days were a blend of excitement & challenges. From securing our first client , a local startup with big dreams, to launching our debut project, each milestone brought us one step closer to realizing our vision. </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+
+        <div class="container right-container">
+            <div class="timeline-circle flex justify-center items-center font-bold text-white" data-aos="fade-down">
+                <h1>4</h1>
+            </div>
+            <div class="txt-box" data-aos="fade-up">
+                <h2>Why We Started</h2>
+                <p>Our journey began with a shared passion for digital landscapes. As tech geeks we found ourselves critiquing other businesses websites. </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+
+       </div>
+    </div>
+
+    <!-- our story -->
+
+    <!-- why choose us -->
+    <!-- <section class="py-20 px-4 whyChooseUs bg-white">
+        <section class="  container mx-auto m-0 "> -->
+            <!-- <div class="text-center">
+                <p class="uppercase text-[#004e58] font-medium pb-4">Lorem, ipsum dolor______</p>
+                <h1 class=" font-bold text-[#31ae90]  text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px]">Why Choose us</h1>
+            </div>
+            <div class="parent-container flex justify-between items-center gap-20 text-white "> -->
+                <!-- First child container -->
+                <!-- <div class="child-container text-black">
+                    <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                        <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[30px]">
+                            <span class="flex justify-center items-center">
+                                <ion-icon name="aperture-outline"></ion-icon>
+                            </span>
+                        </div>
+                        <div class="flex items-center">
+                            <p>Lorem ipsum dolor sit amet,</p>
+                        </div>
+                    </div>
+                    <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                        <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[30px]">
+                            <span class="flex justify-center items-center">
+                                <ion-icon name="aperture-outline"></ion-icon>
+                            </span>
+                        </div>
+                        <div class="flex items-center">
+                            <p>Lorem ipsum dolor sit amet,</p>
+                        </div>
+                    </div>
+                    <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                        <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[30px]">
+                            <span class="flex justify-center items-center">
+                                <ion-icon name="aperture-outline"></ion-icon>
+                            </span>
+                        </div>
+                        <div class="flex items-center">
+                            <p>Lorem ipsum dolor sit amet, </p>
+                        </div>
+                    </div>
+                    <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                        <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[30px]">
+                            <span class="flex justify-center items-center">
+                                <ion-icon name="aperture-outline"></ion-icon>
+                            </span>
+                        </div>
+                        <div class="flex items-center">
+                            <p>Lorem ipsum dolor sit amet,</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Carousel Container -->
+                <!-- <div class="carousel relative overflow-hidden max-w-4xl mx-auto mt-10 rounded-lg shadow-lg hover-shadow"> -->
+
+                    <!-- Slides Wrapper -->
+                    <!-- <div class="carousel-inner relative w-full overflow-hidden"> -->
+
+                        <!-- Slide 1 -->
+                        <!-- <div class="carousel-item active relative float-left w-full">
+                            <img src="./assets/images/about-banner-section.jpg"
+                                class="block w-full" alt="Slide 1">
+                            <div class="absolute bottom-0 left-0 px-6 pb-8 pt-2 text-white bg-black bg-opacity-50 w-full">
+                                <h3 class="text-2xl font-bold">Slide 1</h3>
+                                <p>This is the first slide description.</p>
+                            </div>
+                        </div> -->
+
+                        <!-- Slide 2 -->
+                        <!-- <div class="carousel-item relative float-left w-full hidden">
+                            <img src="./assets/images/about-banner-section.jpg"
+                                class="block w-full" alt="Slide 2">
+                            <div class="absolute bottom-0 left-0 px-6 pb-8 pt-2 text-white bg-black bg-opacity-50 w-full">
+                                <h3 class="text-2xl font-bold">Slide 2</h3>
+                                <p>This is the second slide description.</p>
+                            </div>
+                        </div> -->
+
+                        <!-- Slide 3 -->
+                        <!-- <div class="carousel-item relative float-left w-full hidden">
+                            <img src="./assets/images/about-banner-section.jpg"
+                                class="block w-full" alt="Slide 3">
+                            <div class="absolute bottom-0 left-0 px-6 pb-8 pt-2 text-white bg-black bg-opacity-50 w-full">
+                                <h3 class="text-2xl font-bold">Slide 3</h3>
+                                <p>This is the third slide description.</p>
+                            </div>
+                        </div> -->
+                    <!-- </div> -->
+
+                    <!-- Previous Button -->
+                    <!-- <button
+                        class="absolute top-1/2 left-0 transform -translate-y-1/2 p-4 bg-black bg-opacity-50 text-white hover:bg-opacity-75 focus:outline-none prev-btn">
+                        &#10094;
+                    </button> -->
+
+                    <!-- Next Button -->
+                    <!-- <button
+                        class="absolute top-1/2 right-0 transform -translate-y-1/2 p-4 bg-black bg-opacity-50 text-white hover:bg-opacity-75 focus:outline-none next-btn">
+                        &#10095;
+                    </button> -->
+
+                    <!-- Indicators -->
+                    <!-- <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4 flex space-x-3">
+                        <button class="w-2 h-2 bg-white rounded-full focus:outline-none indicator active"></button>
+                        <button class="w-2 h-2 bg-white rounded-full focus:outline-none indicator"></button>
+                        <button class="w-2 h-2 bg-white rounded-full focus:outline-none indicator"></button>
+                    </div>
+
+                </div> -->
+
+                <!-- Second child container -->
+                <!-- <div class="child-container text-black">
+                    <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                        <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[30px]">
+                            <span class="flex justify-center items-center">
+                                <ion-icon name="aperture-outline"></ion-icon>
+                            </span>
+                        </div>
+                        <div class="flex items-center">
+                            <p>Lorem ipsum dolor sit amet, </p>
+                        </div>
+                    </div>
+                    <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                        <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[30px]">
+                            <span class="flex justify-center items-center">
+                                <ion-icon name="aperture-outline"></ion-icon>
+                            </span>
+                        </div>
+                        <div class="flex items-center">
+                            <p>Lorem ipsum dolor sit amet,</p>
+                        </div>
+                    </div>
+                    <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                        <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[30px]">
+                            <span class="flex justify-center items-center">
+                                <ion-icon name="aperture-outline"></ion-icon>
+                            </span>
+                        </div>
+                        <div class="flex items-center">
+                            <p>Lorem ipsum dolor sit amet,</p>
+                        </div>
+                    </div>
+                    <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                        <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[30px]">
+                            <span class="flex justify-center items-center">
+                                <ion-icon name="aperture-outline"></ion-icon>
+                            </span>
+                        </div>
+                        <div class="flex items-center">
+                            <p>Lorem ipsum dolor sit amet,</p>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+    </section> -->
+    <!-- why choose us -->
+
+    <!-- What we do -->
+    <div class="px-4">
+        <div class="flex flex-col justify-center items-center md:flex-row gap-8 container mx-auto ">
+    
+            <!-- First Container with Content -->
+            <div class="flex-2  p-6 ">
+                <p class="uppercase text-[#FFFFFF] font-medium pb-1"  data-aos="fade-down">What we do</p>
+                    <h1 class=" font-bold text-[#FFFFFF]  text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] pb-4"  data-aos="fade-down">Help your brand<br> grow</h1>
+                <p class="pb-8"  data-aos="fade-down">Grow your brand with our scalable and tactical<br> marketing solutions</p>
+                <button
+                        class="transition-colors button  border border-2 border-[#31ae90]  py-2  bg-[#31ae90]  hover:text-[#31ae90] hover:bg-[transparent]  text-white px-[30px] rounded-md duration-300"
+                        data-aos="fade-down">Explore More</button>
+            </div>
+    
+            <!-- Second Container with Nested Rows -->
+            <div class="flex-1 flex flex-col gap-6">
+    
+                <!-- First Row with Two Containers -->
+                <div class="flex gap-6">
+                    <!-- Container 1 -->
+                    <div class="flex-1 p-6 border border-gray-300 shadow-md rounded-md"  data-aos="fade-dowm">
+                        <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                            <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[20px] rounded-lg">
+                                <span class="flex justify-center items-center p-2">
+                                    <ion-icon name="aperture-outline"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="flex items-center text-xl font-semibold mb-2">
+                                <p> Elevate Your Brand's Presence</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">Our expert marketing strategies are designed to increase your brand's visibility across all channels. We help you stand out and reach the right audience effectively.</p>
+                    </div>
+    
+                    <!-- Container 2 -->
+                    <div class="flex-2 p-6 border border-gray-300 shadow-md rounded-md"  data-aos="fade-down">
+                        <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                            <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[20px] rounded-lg">
+                                <span class="flex justify-center items-center p-2">
+                                    <ion-icon name="aperture-outline"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="flex items-center text-xl font-semibold mb-2">
+                                <p>Drive Targeted Growth</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">Leverage data-driven campaigns<br> tailored to your business goals.</p>
+                    </div>
+                </div>
+    
+                <!-- Second Row with Two Containers -->
+                <div class="flex gap-6">
+                    <!-- Container 3 -->
+                    <div class="flex-2 p-6 border border-gray-300 shadow-md rounded-md"  data-aos="fade-down">
+                        <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                            <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[20px] rounded-lg">
+                                <span class="flex justify-center items-center p-2">
+                                    <ion-icon name="aperture-outline"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="flex items-center text-xl font-semibold mb-2">
+                                <p>Optimize for Max ROI</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">Maximize your marketing <br>investment with solutions that <br>focus on results. </p>
+                    </div>
+    
+                    <!-- Container 4 -->
+                    <div class="flex-1 p-6 border border-gray-300 shadow-md rounded-md"  data-aos="fade-down">
+                        <div class="box flex flex-col md:flex-row mb-4 gap-4">
+                            <div class="box1 bg-[#31ae90] flex justify-center items-center  text-white text-[20px] rounded-lg">
+                                <span class="flex justify-center items-center p-2">
+                                    <ion-icon name="aperture-outline"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="flex items-center text-xl font-semibold mb-2">
+                                <p>Engage and Convert Audiences</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400">We craft compelling content and campaigns that resonate with your target market. Our approach turns engagement into conversions, boosting your bottom line.</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <!-- What we do -->
+
+    <!-- Meet Our Team Section -->
+    <!-- <section class="py-20 bg-white text-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] md:text-4xl font-bold mb-4 text-[#31ae90]">Meet Our Team</h2>
+                <p class="text-2xl  text-[#004e58]">We are a team of dedicated professionals ready to help you succeed.</p>
+            </div> -->
+
+            <!-- Team Members Grid -->
+            <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"> -->
+                
+                <!-- Team Member 1 -->
+                <!-- <div class="bg-white border rounded-lg hover-shadow shadow-lg p-6 text-center team-member">
+                    <img class="w-32 h-32 mx-auto rounded-full mb-4" src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3 class="text-xl font-semibold mb-2">John Doe</h3>
+                    <p class="text-gray-400 mb-4">Chief Executive Officer</p>
+                    <div class="flex justify-center space-x-4 text-white-500 ">
+                        <a href="#" class=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="#" class=""><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#" class=""><ion-icon name="logo-github"></ion-icon></a>
+                    </div>
+                </div> -->
+
+                <!-- Team Member 2 -->
+                <!-- <div class="bg-white border rounded-lg shadow-lg p-6 text-center hover-shadow team-member">
+                    <img class="w-32 h-32 mx-auto rounded-full mb-4" src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3 class="text-xl font-semibold mb-2">Jane Smith</h3>
+                    <p class="text-gray-400 mb-4">Head of Marketing</p>
+                    <div class="flex justify-center space-x-4 text-white-500 ">
+                        <a href="#" class=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="#" class=""><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#" class=""><ion-icon name="logo-github"></ion-icon></a>
+                    </div>
+                </div> -->
+
+                <!-- Team Member 3 -->
+                <!-- <div class="bg-white border rounded-lg shadow-lg p-6 text-center hover-shadow team-member">
+                    <img class="w-32 h-32 mx-auto rounded-full mb-4" src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3 class="text-xl font-semibold mb-2">Mike Johnson</h3>
+                    <p class="text-gray-400 mb-4">Lead Developer</p>
+                    <div class="flex justify-center space-x-4 text-white-500 ">
+                        <a href="#" class=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="#" class=""><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#" class=""><ion-icon name="logo-github"></ion-icon></a>
+                    </div>
+                </div> -->
+
+                <!-- Team Member 4 -->
+                <!-- <div class="bg-white border rounded-lg shadow-lg p-6 text-center hover-shadow team-member">
+                    <img class="w-32 h-32 mx-auto rounded-full mb-4" src="https://via.placeholder.com/150" alt="Team Member">
+                    <h3 class="text-xl font-semibold mb-2">Emily Brown</h3>
+                    <p class="text-gray-400 mb-4">Product Designer</p>
+                    <div class="flex justify-center space-x-4 text-white-500 ">
+                        <a href="#" class=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="#" class=""><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#" class=""><ion-icon name="logo-github"></ion-icon></a>
+                    </div>
+                </div> -->
+
+            <!-- </div>
+        </div>
+    </section> -->
+    <!-- Meet Our Team Section -->
+
+    <!-- stats -->
+    <div class="px-4 ">
+        <div class="container mx-auto bg-[#2f43454d] py-10 subscribe  rounded px-10 my-20 text-center">
+            <h2 class="text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] md:text-4xl font-bold mb-4  mb-2">Get started now!</h2>
+            <p class="text-2xl   mb-10 ">Don’t get left behind in this digital revolution</p>
+            <div class="flex justify-center">
+                <button
+                            class="contact-button hover:border hover:border-[#48c5a7] hover:text-[#31ae90] px-[30px] py-2 rounded-md flex items-center gap-2 bg-[#31ae90] hover:bg-[transparent] text-[white] transition-colors duration-300 ">
+                            <p class="font-medium">Contact Us</p>
+                        </button>
+            </div>
+        </div>
+    </div>
+    <!-- stats -->
+
+    <!-- footer -->
+    <footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
+        <div class="text-center pb-[20px]">
+            <h1
+                class=" text-[35px] md:text-[35px] lg:text-[35px] font-bold md:font-extrabold lg:font-extrabold ciel py-[10px]">
+                <div class="load">
+                    <span>C</span>
+                    <span>I</span>
+                    <span>E</span>
+                    <span>L</span>
+                </div>
+            </h1>
+        </div>
+        <hr class="pb-[20px] ">
+        <div
+            class="container-fluid flex justify-between gap-y-[30px] flex-col lg:flex-row text-center text-[#3333333] pt-[5px]  items-center pb-[5px] lg:pt-0 lg:pb-0  ">
+            <div class="flex justify-center gap-5 items-center">
+                <a href="mailto:contact@elegansinc.com" class="text-white text-[30px]">
+                    <ion-icon name="mail"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/elegansinc/?igsh=dXVqc2I4MTlxZXFx" target="_blank"
+                    class="text-white text-[30px]">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://www.facebook.com/elegansinc" target="_blank" class="text-white text-[30px]">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://www.facebook.com/elegansinc" target="_blank" class="text-white text-[30px]">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="https://www.facebook.com/elegansinc" target="_blank" class="text-white text-[30px]">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+
+            </div>
+            <div class="copyRight ">
+
+                <div class="flex lg:flex-row md:flex-row  flex-col gap-4 items-center">
+                    <a href="./index.html" class="flex text-[16px]">Home </a>
+                    <a href="./about.html" class="flex text-[16px]">About Us </a>
+                    <a href="#" class=" flex text-[16px]">Solutions </a>
+                    <a href="#" class="flex text-[16px]">Career </a>
+                    <a href="#" class="text-[16px]">Blog</a>
+                </div>
+            </div>
+            <h1 class=" mt-1 text-[16px]">&copy; CIEL, 2024.
+                All rights reserved.</h1>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- JQuery -->
+    <script src="./assets/js/jQuery.js"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+        integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./assets/javascript/animation.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        // JavaScript for Carousel Functionality
+        const items = document.querySelectorAll('.carousel-item');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            items.forEach((item, i) => {
+                item.classList.add('hidden');
+                item.classList.remove('active');
+                indicators[i].classList.remove('bg-black');
+                indicators[i].classList.add('bg-white');
+            });
+            items[index].classList.remove('hidden');
+            items[index].classList.add('active');
+            indicators[index].classList.remove('bg-white');
+            indicators[index].classList.add('bg-black');
+        }
+
+        document.querySelector('.next-btn').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            showSlide(currentIndex);
+        });
+
+        document.querySelector('.prev-btn').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            showSlide(currentIndex);
+        });
+
+        indicators.forEach((indicator, i) => {
+            indicator.addEventListener('click', () => {
+                showSlide(i);
+                currentIndex = i;
+            });
+        });
+
+        showSlide(currentIndex); // Show the initial slide
+    </script>
+
+    <!-- script for navbar-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.querySelector(".menu-button");
+            const menuCloseButton = document.querySelector(".menu-close");
+            const mobileNav = document.querySelector(".mobile-nav");
+
+            // Open the mobile menu
+            menuButton.addEventListener("click", function () {
+                mobileNav.classList.remove("hidden");
+            });
+
+            // Close the mobile menu
+            menuCloseButton.addEventListener("click", function () {
+                mobileNav.classList.add("hidden");
+            });
+        });
+    </script>
+    <script>
+        // JavaScript to add animation on scroll
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        timelineItems.forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+    <!-- script -->
+    <script src="./assets/javascript/about-functionalities.js"></script>
+
+</body>
+
+</html>

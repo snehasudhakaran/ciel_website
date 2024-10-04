@@ -1,0 +1,16 @@
+
+
+ .video-background-container:before{
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    background-color: rgba(5, 5, 5, 0.8);
+    z-index: 3;
+}
+
+.banner-section-info{
+    z-index: 4;
+}

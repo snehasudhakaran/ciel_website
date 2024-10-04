@@ -1,0 +1,29 @@
+.paid-social-adss{
+    border: 1px dashed white;
+    border-radius: 6px;
+}
+
+.paid-container div{
+ background-color:#2f43454d;
+ border-radius: 10px;
+ border: 0.3px solid #c4c4c447;
+}
+
+.video-background-container:before{
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    background-color: rgba(5, 5, 5, 0.9);
+    z-index: 3;
+}
+
+.banner-section-info{
+    z-index: 4;
+}
+
+.subscribe  {
+    border-radius: 20px !important;
+}

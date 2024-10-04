@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciel</title>
+
+    <!-- Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Juana:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/career.css" />
+
+    <!-- animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+</head>
+
+<body class=" text-white">
+
+      <!-- Header Start -->
+      <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-white  transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between" aria-label="Global">
+                <!-- Logo Section -->
+                <div class="flex lg:flex-1">
+                    <a href="/" class="flex items-center">
+                        <img src="./assets/images/logo.png" alt="CIEL Logo" id="logo" class="h-[55px] w-auto">
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex mobile-view-nav-menu">
+                    <button type="button"
+                        class="menu-button inline-flex items-center justify-center rounded-md p-2.5 text-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Desktop Menu Items -->
+                <div class="hidden lg:flex lg:gap-x-12 items-center">
+                    <div class="lg:flex lg:gap-x-12">
+                        <a href="./index.html"
+                            class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
+                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About
+                            us</a>
+                        <a href="#" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Services</a>
+                        <a href="./career.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Career</a>
+                        <a href="./blog.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Blog</a>
+                    </div>
+                    <!-- Contact Button -->
+                    <div>
+                        <a href="./contact.html">
+                        <button
+                            class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300 ">
+                            <p class="font-extrabold">Contact Us</p>
+                            <span class="flex items-center font-extrabold">
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
+                            </span>
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden mobile-nav hidden" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 z-50 bg-[#0b0219] opacity-80"></div>
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-2 sm:max-w-sm">
+                <div class="flex items-center justify-between mb-4">
+                    <a href="/" class="flex items-center">
+                        <h1 class="text-[#0b0219] text-[30px] font-extrabold">CIEL</h1>
+                    </a>
+                    <button type="button" class="rounded-md text-[#0b0219] menu-close">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root text-[#0b0219]">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="./index.html"
+                                class="block px-3 py-2 rounded-md text-lg font-bold hover:bg-gray-50 hover:text-[#0b0219]">Home</a>
+                            <a href="./about.html"
+                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">About
+                                us</a>
+                            <a href="#"
+                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Services</a>
+                            <a href="./career.html"
+                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Career</a>
+                            <a href="./blog.html"
+                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </header>
+      <!-- Header End -->
+
+     <!-- Banner Section -->
+     <section
+     class="pt-[150px] md:pt-[150px] lg:pt-[150px] pb-[100px] container mx-auto px-4  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[80px] ">
+     <div class="banner-section-info">
+         <div class="banner-header career-header">
+             <h1 class="text-[15px] sm:text-[15px] font-medium md:text-[18px] lg:text-[30px] mb-6" data-aos="fade-up-right">Join Our Dynamic Team and Revolutionize the Future of Digital Marketing!
+             </h1>
+             <p class="text-[15px] sm:text-[15px]  md:text-[15px] lg:text-[19px] mb-10" data-aos="flip-left">
+                Step into the world where creativity meets strategy and shape the future of online engagement. We're hiring passionate professionals in SEO, content creation, social media, and more. Be part of a dynamic, growth-focused environment where creativity meets strategy - apply today!</p>
+        
+             <div  data-aos="zoom-out">
+                <a href="./contact.html">
+                    <button
+                        class="contact-button border border-[#48c5a7] text-[#31ae90] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
+                        <p class="font-medium">Contact Us</p>
+                    </button>
+                </a>
+             </div>
+         </div>
+     </div>
+     <div class="">
+       <img src="./assets/images/career-page.png"/>
+     </div>
+
+ </section>
+ <!-- Banner Section -->
+
+ <div class="text-center input mb-20">
+    <span><ion-icon name="search-outline"></ion-icon></span>
+    <input type='text' id="jobSearchInput" placeholder="Search" class="search border border-1 rounded-5"/>
+</div>
+
+<!-- Job Post Containers -->
+<div id="jobPosts" class="container mx-auto px-4 mb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-5 text-black">
+    <div class="job-post" data-title="Frontend Developer">
+        <h3 class="font-bold text-[25px] mb-2">Frontend Developer</h3>
+        <p class="mb-3">Join our team to create cutting-edge web applications.</p>
+        <div class="flex gap-[10px]">
+            <p class="font-bold">business Area:</p>
+            <p>Technology</p>
+        </div>
+        <div class="flex gap-[10px] mb-5">
+            <p class="font-bold">Year Of Experience:</p>
+            <p>1-2</p>
+        </div>
+        <button class="apply-button text-white" data-aos="zoom-in">Apply now 👆</button>
+    </button>
+    </div>
+    <div class="job-post" data-title="Digital Marketing Specialist">
+        <h3 class="font-bold text-[25px] mb-2">Digital Marketing Specialist</h3>
+        <p class="mb-3">Drive brand awareness and manage digital campaigns for our clients.</p>
+        <div class="flex gap-[10px]">
+            <p class="font-bold">business Area:</p>
+            <p>Technology</p>
+        </div>
+        <div class="flex gap-[10px] mb-5">
+            <p class="font-bold">Year Of Experience:</p>
+            <p>1-2</p>
+        </div>
+        <button class="apply-button text-white" data-aos="zoom-in">Apply now 👆</button>
+    </div>
+    <div class="job-post" data-title="Content Writer">
+        <h3 class="font-bold text-[25px] mb-2">Content Writer</h3>
+        <p class="mb-3">Create engaging content for blogs, websites, and social media channels.</p>
+        <div class="flex gap-[10px]">
+            <p class="font-bold">business Area:</p>
+            <p>Technology</p>
+        </div>
+        <div class="flex gap-[10px] mb-5">
+            <p class="font-bold">Year Of Experience:</p>
+            <p>1-2</p>
+        </div>
+        <button class="apply-button text-white" data-aos="zoom-in">Apply now 👆</button>
+    </div>
+    <div class="job-post" data-title="Graphic Designer">
+        <h3 class="font-bold text-[25px] mb-2">Graphic Designer</h3>
+        <p class="mb-3">Design visually stunning graphics for our brand and clients.</p>
+        <div class="flex gap-[10px]">
+            <p class="font-bold">business Area:</p>
+            <p>Technology</p>
+        </div>
+        <div class="flex gap-[10px] mb-5">
+            <p class="font-bold">Year Of Experience:</p>
+            <p>1-2</p>
+        </div>
+        <button class="apply-button text-white" data-aos="zoom-in">Apply now 👆</button>
+    </div>
+    <div class="job-post" data-title="Project Manager">
+        <h3 class="font-bold text-[25px] mb-2">Project Manager</h3>
+        <p class="mb-3">Lead and manage project teams to deliver exceptional results.</p>
+        <div class="flex gap-[10px]">
+            <p class="font-bold">business Area:</p>
+            <p>Technology</p>
+        </div>
+        <div class="flex gap-[10px] mb-5">
+            <p class="font-bold">Year Of Experience:</p>
+            <p>1-2</p>
+        </div>
+        <button class="apply-button text-white" data-aos="zoom-in">Apply now 👆</button>
+    </div>
+    <div class="job-post" data-title="SEO Specialist">
+        <h3 class="font-bold text-[25px] mb-2">SEO Specialist</h3>
+        <p class="mb-3">Improve search engine rankings and optimize websites for better performance.</p>
+        <div class="flex gap-[10px]">
+            <p class="font-bold">business Area:</p>
+            <p>Technology</p>
+        </div>
+        <div class="flex gap-[10px] mb-5">
+            <p class="font-bold">Year Of Experience:</p>
+            <p>1-2</p>
+        </div>
+        <button class="apply-button text-white" data-aos="zoom-in">Apply now 👆</button>
+    </div>
+</div>
+
+
+<div class="container flex justify-center gap-[50px] mx-auto my-20">
+    <div class="card">
+      <div class="card-content">
+        <h3>Product 1</h3>
+        <p>Click to reveal more details!</p>
+      </div>
+      <div class="cart">
+        <h4>Product 1 Cart</h4>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-content">
+        <h3>Product 2</h3>
+        <p>Click to reveal more details!</p>
+      </div>
+      <div class="cart">
+        <h4>Product 2 Cart</h4>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-content">
+        <h3>Product 3</h3>
+        <p>Click to reveal more details!</p>
+      </div>
+      <div class="cart">
+        <h4>Product 3 Cart</h4>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-content">
+        <h3>Product 4</h3>
+        <p>Click to reveal more details!</p>
+      </div>
+      <div class="cart">
+        <h4>Product 4 Cart</h4>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
+
+<section x-data="
+{
+openFaq1: false, 
+openFaq2: false, 
+openFaq3: false, 
+openFaq4: false, 
+openFaq5: false, 
+openFaq6: false
+}
+" class="relative z-20 overflow-hidden    pb-12  lg:pb-[30px] container mx-auto px-4 mb-[35px]">
+<div class="container mx-auto">
+ 
+  <div class="flex flex-wrap ">
+    
+    <div class="w-full px-4 ">
+      <div
+        class="w-full p-4 mb-8  rounded-lg shadow border dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+        <button class="flex w-full text-left faq-btn" @click="openFaq4 = !openFaq4">
+          <div
+            class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+            <svg :class="openFaq4 && 'rotate-180'" width="22" height="22" viewBox="0 0 22 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                fill="currentColor" />
+            </svg>
+          </div>
+          <div class="w-full">
+            <h4 class="mt-1 text-lg font-semibold text-dark dark:text-white">
+                Application Process
+            </h4>
+          </div>
+        </button>
+        <div x-show="openFaq4" class="faq-content pl-[62px]">
+          <p class="py-1 text-base leading-relaxed text-body-color dark:text-dark-6 ">
+          <p class="mb-4"> At Ciel, we believe that applying for a job should be straightforward and efficient. Our application process is designed to give you a seamless experience from start to finish, ensuring you have the best opportunity to showcase your skills and passion.</p>
+          <div class="flex flex-col gap-y-3">
+            <div class="flex gap-2 items-center">
+                <span class="text-[#31ae90]">
+                    <ion-icon name="checkmark-outline"></ion-icon>
+                </span>
+                <p> Submit Your Application</p>
+            </div>
+            <div class="flex gap-2 items-center">
+                <span class="text-[#31ae90]">
+                    <ion-icon name="checkmark-outline"></ion-icon>
+                </span>
+                <p> Initial Screening</p>
+            </div>
+            <div class="flex gap-2 items-center">
+                <span class="text-[#31ae90]">
+                    <ion-icon name="checkmark-outline"></ion-icon>
+                </span>
+                <p> Interviews</p>
+            </div>
+            <div class="flex gap-2 items-center">
+                <span class="text-[#31ae90]">
+                    <ion-icon name="checkmark-outline"></ion-icon>
+                </span>
+                <p> Offer and Onboarding</p>
+            </div>
+            
+        </div>
+        </div>
+      </div>
+      <div
+        class="w-full p-4 mb-8 rounded-lg shadow border dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+        <button class="flex w-full text-left faq-btn" @click="openFaq5 = !openFaq5">
+          <div
+            class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+            <svg :class="openFaq5 && 'rotate-180'" width="22" height="22" viewBox="0 0 22 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                fill="currentColor" />
+            </svg>
+          </div>
+          <div class="w-full">
+            <h4 class="mt-1 text-lg font-semibold text-dark dark:text-white">
+                Interview Process
+            </h4>
+          </div>
+        </button>
+        <div x-show="openFaq5" class="faq-content pl-[62px]">
+          <p class="py-1 text-base leading-relaxed text-body-color dark:text-dark-6 ">
+            <p class="mb-4"> Our interview process is designed to be clear, engaging, and informative, ensuring you feel confident every step of the way.</p>
+            <div class="flex flex-col gap-y-3">
+              <div class="flex gap-2 items-center">
+                  <span class="text-[#31ae90]">
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                  </span>
+                  <p> Introductory Call</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                  <span class="text-[#31ae90]">
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                  </span>
+                  <p> In-Depth Interview</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                  <span class="text-[#31ae90]">
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                  </span>
+                  <p> Skills Assessment (If Applicable)</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                  <span class="text-[#31ae90]">
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                  </span>
+                  <p> Final Interview and Cultural Fit</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <span class="text-[#31ae90]">
+                    <ion-icon name="checkmark-outline"></ion-icon>
+                </span>
+                <p> Feedback and Offer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full p-4 mb-8  rounded-lg shadow border dark:bg-dark-2 sm:p-8 lg:px-6 xl:px-8">
+        <button class="flex w-full text-left faq-btn" @click="openFaq6 = !openFaq6">
+          <div
+            class="bg-primary/5 dark:bg-white/5 text-primary mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg">
+            <svg :class="openFaq6 && 'rotate-180'" width="22" height="22" viewBox="0 0 22 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 15.675C10.7937 15.675 10.6219 15.6062 10.45 15.4687L2.54374 7.69998C2.23436 7.3906 2.23436 6.90935 2.54374 6.59998C2.85311 6.2906 3.33436 6.2906 3.64374 6.59998L11 13.7844L18.3562 6.53123C18.6656 6.22185 19.1469 6.22185 19.4562 6.53123C19.7656 6.8406 19.7656 7.32185 19.4562 7.63123L11.55 15.4C11.3781 15.5719 11.2062 15.675 11 15.675Z"
+                fill="currentColor" />
+            </svg>
+          </div>
+          <div class="w-full">
+            <h4 class="mt-1 text-lg font-semibold text-dark dark:text-white">
+                Benefits and Perks
+            </h4>
+          </div>
+        </button>
+        <div x-show="openFaq6" class="faq-content pl-[62px]">
+          <p class="py-1 text-base leading-relaxed text-body-color dark:text-dark-6 ">
+            
+            <div class="flex flex-col gap-y-3">
+                <div class="flex gap-2 items-center">
+                    <span class="text-[#31ae90]">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </span>
+                    <p>Elevate Your Career and Lifestyle</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <span class="text-[#31ae90]">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </span>
+                    <p>Health and Well-Being</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <span class="text-[#31ae90]">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </span>
+                    <p>Professional Development</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <span class="text-[#31ae90]">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </span>
+                    <p>Workplace Perks</p>
+                </div>
+                <div class="flex gap-2 items-center">
+                  <span class="text-[#31ae90]">
+                      <ion-icon name="checkmark-outline"></ion-icon>
+                  </span>
+                  <p>Recognition and Rewards</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- footer -->
+<footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
+    <div class="text-center pb-[20px]">
+        <h1
+            class=" text-[35px] md:text-[35px] lg:text-[35px] font-bold md:font-extrabold lg:font-extrabold ciel py-[10px]">
+            <div class="load">
+                <span>C</span>
+                <span>I</span>
+                <span>E</span>
+                <span>L</span>
+            </div>
+        </h1>
+    </div>
+    <hr class="pb-[20px] ">
+    <div
+        class="container-fluid flex justify-between gap-y-[30px] flex-col lg:flex-row text-center text-[#3333333] pt-[5px]  items-center pb-[5px] lg:pt-0 lg:pb-0  ">
+        <div class="flex justify-center gap-5 items-center">
+            <a href="mailto:contact@elegansinc.com" class="text-white text-[30px]">
+                <ion-icon name="mail"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/elegansinc/?igsh=dXVqc2I4MTlxZXFx" target="_blank"
+                class="text-white text-[30px]">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://www.facebook.com/elegansinc" target="_blank" class="text-white text-[30px]">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="https://www.facebook.com/elegansinc" target="_blank" class="text-white text-[30px]">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://www.facebook.com/elegansinc" target="_blank" class="text-white text-[30px]">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+
+        </div>
+        <div class="copyRight ">
+
+            <div class="flex lg:flex-row md:flex-row  flex-col gap-4 items-center">
+                <a href="./index.html" class="flex text-[16px]">Home </a>
+                <a href="./about.html" class="flex text-[16px]">About Us </a>
+                <a href="#" class=" flex text-[16px]">Solutions </a>
+                <a href="#" class="flex text-[16px]">Career </a>
+                <a href="#" class="text-[16px]">Blog</a>
+            </div>
+        </div>
+        <h1 class=" mt-1 text-[16px]">&copy; CIEL, 2024.
+            All rights reserved.</h1>
+    </div>
+</footer>
+<!-- footer -->
+
+<!-- FAQ Section script -->
+<script>
+    // JavaScript to toggle FAQ answer visibility
+    function toggleAnswer(id) {
+        const answer = document.getElementById(id);
+        answer.classList.toggle('hidden');
+        answer.classList.toggle('block');
+    }
+</script>
+<!--  -->
+
+<!-- JQuery -->
+<script src="./assets/js/jQuery.js"></script>
+
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<!-- Waypoints -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+    integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="./assets/javascript/animation.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<!-- script for navbar-->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(".menu-button");
+        const menuCloseButton = document.querySelector(".menu-close");
+        const mobileNav = document.querySelector(".mobile-nav");
+
+        // Open the mobile menu
+        menuButton.addEventListener("click", function () {
+            mobileNav.classList.remove("hidden");
+        });
+
+        // Close the mobile menu
+        menuCloseButton.addEventListener("click", function () {
+            mobileNav.classList.add("hidden");
+        });
+    });
+</script>
+<script>
+    // Get references to the input and job posts
+const jobSearchInput = document.getElementById('jobSearchInput');
+const jobPosts = document.querySelectorAll('.job-post');
+
+// Add event listener for input field
+jobSearchInput.addEventListener('input', function () {
+    const filterValue = jobSearchInput.value.toLowerCase();
+    
+    // Loop through each job post and display/hide based on match
+    jobPosts.forEach(function (post) {
+        const jobTitle = post.getAttribute('data-title').toLowerCase();
+        
+        if (jobTitle.includes(filterValue)) {
+            post.style.display = ''; // Show the job post if it matches
+        } else {
+            post.style.display = 'none'; // Hide the job post if it doesn't match
+        }
+    });
+});
+
+</script>
+<!-- script -->
+
+<!-- functionalities -->
+<script src="./assets/javascript/website_functionalities.js"></script>
+
+</body>
+
+</html>

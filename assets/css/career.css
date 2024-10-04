@@ -1,0 +1,96 @@
+.career-header h1 , .career-header p{
+    line-height: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input{
+    position: relative;
+    width:50%;
+    height: 40px;
+    display: block;
+    margin: auto;
+  }
+  .input span{
+    position: absolute;
+    left: 13px;
+    top:10px;
+    z-index: 1;
+    font-size: 22px;
+    color:rgb(205, 202, 202);
+  }
+  .search{
+    padding-left: 47px !important;
+    width:100%;
+  }
+
+  .input input{
+    border-radius: 30px;
+    background-color: transparent;
+    padding: 10px 0px;
+  }
+
+  #jobPosts .job-post{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+
+  /* Container styling */
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Styling for the default product card content */
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Initially hide the cart */
+.cart {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: top 0.4s ease, opacity 0.4s ease;
+}
+
+/* On hover, reveal the cart */
+.card:hover .cart {
+  top: 0;
+  opacity: 1;
+}
+
+/* Hover effect to scale up the card */
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #2980b9;
+}

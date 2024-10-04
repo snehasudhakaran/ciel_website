@@ -1,0 +1,170 @@
+.about-banner-section{
+    background-image: url('../images/about.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    z-index: -1;
+}
+
+ .video-background-container:before{
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    background-color: rgba(5, 5, 5, 0.4);
+    z-index: 3;
+}
+
+.banner-section-info{
+    z-index: 4;
+}
+
+.about-quotes{
+    background: linear-gradient(to right top, #093039, #073a43, #04444e, #004e58);
+    position: relative;
+}
+
+.whyChooseUs .parent-container .child-container .box .box1{
+    width:50px;
+    height:50px;
+    border-radius: 10px;
+}
+
+.choose-image{
+    border-radius: 30px;
+}
+
+.team-member{
+    background: linear-gradient(to right top, #0d2026, #0c2830, #093039, #073a43, #04444e, #004e58);
+    color:white;
+}
+
+.timeline{
+    position:relative;
+    max-width:1200px;
+    margin:100px auto;
+}
+
+.timeline .container{
+    padding: 10px 50px;
+    position:relative;
+    width:50%;
+    animation: movedown 1s linear forwards ;
+    opacity: 0;
+}
+
+.timeline .container:nth-child(1){
+    animation-delay: 0s;
+}
+
+.timeline .container:nth-child(2){
+    animation-delay: 1s;
+}
+
+.timeline .container:nth-child(3){
+    animation-delay: 2s;
+}
+
+.timeline .container:nth-child(4){
+    animation-delay: 3s;
+}
+
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.timeline .txt-box{
+    padding:20px 30px;
+    background: #fff;
+    position:relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.left-container{
+    left:0;
+}
+
+.right-container{
+    left:50%;
+}
+
+.timeline .timeline-circle{
+    position:absolute;
+    width:30px;
+    background-color:#0599ad;
+    height:30px;
+    border-radius: 50%;
+    right:-15px;
+    top:32px;
+    z-index:10;
+}
+
+.right-container .timeline-circle{
+    left:-15px;
+}
+
+.timeline::after{
+    content:'';
+    position:absolute;
+    width:6px;
+    height:100%;
+    background:#fff;
+    top:0;
+    left:50%;
+    margin-left:-3px;
+    z-index:-1;
+    animation: moveline 3s linear  forwards ;
+}
+
+@keyframes moveline{
+    0%{
+        height:0;
+    }
+    100%{
+        height:100%;
+    }
+}
+
+.timeline .txt-box h2{
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top:25px;
+    z-index:1;
+    border-top:15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -14px;
+}
+
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top:25px;
+    z-index:1;
+    border-top:15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -14px;
+}
+
+.subscribe  {
+    border-radius: 20px !important;
+}
