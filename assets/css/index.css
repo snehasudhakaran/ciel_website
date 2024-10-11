@@ -674,8 +674,9 @@ marquee{
 }
 
 .circle-parent-container{
-  margin: 150px 0px;
+  margin: 140px 0px;
   position: relative;
+  z-index: -2;
 }
 
 .circle-container {
@@ -686,6 +687,7 @@ marquee{
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 /* Circle animation */
@@ -710,7 +712,7 @@ marquee{
   cx: 250px;
   cy: 250px;
   r: 150px;
-  fill: white; /* White background */
+  fill: rgb(3, 3, 3); /* White background */
 }
 
 @keyframes growAndFade {
@@ -734,7 +736,7 @@ marquee{
 .grid-container {
   width: 100%;
   display: flex;
-  z-index: -2;
+  z-index: -1;
 }
 
 .text-container {
@@ -771,7 +773,8 @@ marquee{
 .scrolling-text .scroll-inner-text div, .scroll-inner-text-2 div, .scroll-inner-text-3  div {
   border-radius: 30px;
   transform: rotate(180deg);
-  border: 0.1px solid white;
+  border: 0.1px solid rgb(12, 12, 12);
+  color:black;
 }
 
 @keyframes loopscroll {
@@ -785,4 +788,19 @@ marquee{
 
 .second-container .scroll-inner-text div, .second-container .scroll-inner-text-2 div , .second-container .scroll-inner-text-3 div{
   background: linear-gradient(to right top,black, #0c181d, #0d2026, #0c2830, #093039, #073a43, #04444e, #004e58);
+  color:rgb(250, 246, 246);
+  border: none;
+  font-weight: 500;
+}
+
+.blog-post{
+  position: relative;
+}
+
+.blog-post::before , .blog-post::after{
+  content:"";
+  position: absolute;
+  left:-2px;
+  top:-2px;
+  background : linear-gradient(45deg , #e6fb04);
 }

@@ -39,7 +39,7 @@
 <body class=" text-white">
 
     <!-- Header Start -->
-    <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-black  transition-colors duration-300 bg-white">
+    <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-black bg-white transition-colors duration-300">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between" aria-label="Global">
                 <!-- Logo Section -->
@@ -48,37 +48,59 @@
                         <img src="./assets/images/logoBlack.png" alt="CIEL Logo" id="logo" class="h-[55px] w-auto">
                     </a>
                 </div>
-
+    
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden flex mobile-view-nav-menu">
                     <button type="button"
                         class="menu-button inline-flex items-center justify-center rounded-md p-2.5 text-white">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
                 </div>
-
+    
                 <!-- Desktop Menu Items -->
                 <div class="hidden lg:flex lg:gap-x-12 items-center">
                     <div class="lg:flex lg:gap-x-12">
-                        <a href="./index.html"
-                            class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
-                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About
-                            us</a>
-                        <a href="#" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Services</a>
+                        <a href="./index.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
+                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About us</a>
+    
+                        <!-- Dropdown for Services -->
+                        <div class="relative group">
+                            <a href="#"
+                                class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item flex items-center">
+                                Services
+                                <svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute hidden group-hover:block bg-white text-black rounded-lg mt-[2px] py-2 w-[200px] shadow-lg border">
+                                <a href="./all_services.html" class="block px-4 py-2 hover:bg-gray-100">All services </a>
+                                <a href="./PM_service_page.html" class="block px-4 py-2 hover:bg-gray-100">Perfomance Marketing </a>
+                                <a href="./PPC&SEM.html" class="block px-4 py-2 hover:bg-gray-100">PPC & SEM</a>
+                                <a href="./social_media_management.html" class="block px-4 py-2 hover:bg-gray-100">Branding & Social Media Management</a>
+                                <a href="./SEO.html" class="block px-4 py-2 hover:bg-gray-100">Search Engine Optimization </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Website Design & Development </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Data Analytics</a>
+                            </div>
+                        </div>
+    
                         <a href="./career.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Career</a>
                         <a href="./blog.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Blog</a>
                     </div>
+    
                     <!-- Contact Button -->
                     <div>
                         <a href="./contact.html">
-
                             <button
-                                class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300 ">
+                                class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300">
                                 <p class="font-extrabold">Contact Us</p>
                                 <span class="flex items-center font-extrabold">
                                     <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -89,7 +111,7 @@
                 </div>
             </nav>
         </div>
-
+    
         <!-- Mobile Menu -->
         <div class="lg:hidden mobile-nav hidden" role="dialog" aria-modal="true">
             <div class="fixed inset-0 z-50 bg-[#0b0219] opacity-80"></div>
@@ -100,12 +122,14 @@
                     </a>
                     <button type="button" class="rounded-md text-[#0b0219] menu-close">
                         <span class="sr-only">Close menu</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
+    
+                <!-- Mobile Dropdown -->
                 <div class="mt-6 flow-root text-[#0b0219]">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
@@ -114,8 +138,27 @@
                             <a href="./about.html"
                                 class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">About
                                 us</a>
-                            <a href="#"
-                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Services</a>
+    
+                            <!-- Services Dropdown -->
+                            <div class="services-dropdown">
+                                <button
+                                    class="w-full text-left block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">
+                                    Services
+                                    <svg class="inline ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+    
+                                <div class="hidden services-dropdown-content bg-white text-[#0b0219]">
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Web Design</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">SEO Services</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Digital Marketing</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Branding</a>
+                                </div>
+                            </div>
+    
                             <a href="./career.html"
                                 class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Career</a>
                             <a href="./blog.html"
@@ -159,7 +202,7 @@
 
     <!-- blog -->
     <div class="bg-white m-0" id="blog">
-        <div class="container mx-auto px-4 py-[50px] pb-[70px]">
+        <div class="container mx-auto px-4 py-[100px] pb-[100px]">
             <h1 class="text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] font-bold text-center mb-8 text-black"
                 data-aos="fade-down">Stay Ahead with Expert Insights</h1>
             <!-- Blog Container -->
@@ -170,18 +213,10 @@
     </div>
     <!-- blog -->
 
-    <!-- footer -->
-    <footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
-        <div class="text-center pb-[20px]">
-            <h1
-                class=" text-[35px] md:text-[35px] lg:text-[35px] font-bold md:font-extrabold lg:font-extrabold ciel py-[10px]">
-                <div class="load">
-                    <span>C</span>
-                    <span>I</span>
-                    <span>E</span>
-                    <span>L</span>
-                </div>
-            </h1>
+     <!-- footer -->
+     <footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
+        <div class="flex justify-center pb-[30px]">
+            <img src="./assets/images/footer-logo.png" class="h-[55px] w-auto " />
         </div>
         <hr class="pb-[20px] ">
         <div
@@ -252,46 +287,6 @@
     AOS.init();
 </script>
 
-<!-- script for navbar-->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const menuButton = document.querySelector(".menu-button");
-        const menuCloseButton = document.querySelector(".menu-close");
-        const mobileNav = document.querySelector(".mobile-nav");
-
-        // Open the mobile menu
-        menuButton.addEventListener("click", function () {
-            mobileNav.classList.remove("hidden");
-        });
-
-        // Close the mobile menu
-        menuCloseButton.addEventListener("click", function () {
-            mobileNav.classList.add("hidden");
-        });
-    });
-</script>
-<script>
-    // Get references to the input and job posts
-const jobSearchInput = document.getElementById('jobSearchInput');
-const jobPosts = document.querySelectorAll('.job-post');
-
-// Add event listener for input field
-jobSearchInput.addEventListener('input', function () {
-    const filterValue = jobSearchInput.value.toLowerCase();
-    
-    // Loop through each job post and display/hide based on match
-    jobPosts.forEach(function (post) {
-        const jobTitle = post.getAttribute('data-title').toLowerCase();
-        
-        if (jobTitle.includes(filterValue)) {
-            post.style.display = ''; // Show the job post if it matches
-        } else {
-            post.style.display = 'none'; // Hide the job post if it doesn't match
-        }
-    });
-});
-
-</script>
 <!-- script -->
 
 <!-- functionalities -->

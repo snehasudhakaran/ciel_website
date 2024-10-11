@@ -11,8 +11,9 @@
 
   /* font and typography */
   
-  --body-font: 'Open Sans', sans-serif;
+  --body-font:  'DM Sans', sans-serif;
   --second-font: 'Poppins', sans-serif;
+  --location-font: 'Juana It', serif;
 
   --big-font-size: 56px;
   --h1-font-size: 45px;

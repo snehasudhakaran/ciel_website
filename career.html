@@ -39,7 +39,7 @@
 <body class=" text-white">
 
       <!-- Header Start -->
-      <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-white  transition-colors duration-300">
+      <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-white transition-colors duration-300">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between" aria-label="Global">
                 <!-- Logo Section -->
@@ -48,47 +48,70 @@
                         <img src="./assets/images/logo.png" alt="CIEL Logo" id="logo" class="h-[55px] w-auto">
                     </a>
                 </div>
-
+    
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden flex mobile-view-nav-menu">
                     <button type="button"
                         class="menu-button inline-flex items-center justify-center rounded-md p-2.5 text-white">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
                 </div>
-
+    
                 <!-- Desktop Menu Items -->
                 <div class="hidden lg:flex lg:gap-x-12 items-center">
                     <div class="lg:flex lg:gap-x-12">
-                        <a href="./index.html"
-                            class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
-                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About
-                            us</a>
-                        <a href="#" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Services</a>
+                        <a href="./index.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
+                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About us</a>
+    
+                        <!-- Dropdown for Services -->
+                        <div class="relative group">
+                            <a href="#"
+                                class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item flex items-center">
+                                Services
+                                <svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute hidden group-hover:block bg-white text-black rounded-lg mt-[2px] py-2 w-[200px] shadow-lg border">
+                                <a href="./all_services.html" class="block px-4 py-2 hover:bg-gray-100">All services </a>
+                                <a href="./PM_service_page.html" class="block px-4 py-2 hover:bg-gray-100">Perfomance Marketing </a>
+                                <a href="./PPC&SEM.html" class="block px-4 py-2 hover:bg-gray-100">PPC & SEM</a>
+                                <a href="./social_media_management.html" class="block px-4 py-2 hover:bg-gray-100">Branding & Social Media Management</a>
+                                <a href="./SEO.html" class="block px-4 py-2 hover:bg-gray-100">Search Engine Optimization </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Website Design & Development </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Data Analytics</a>
+                            </div>
+                        </div>
+    
                         <a href="./career.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Career</a>
                         <a href="./blog.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Blog</a>
                     </div>
+    
                     <!-- Contact Button -->
                     <div>
                         <a href="./contact.html">
-                        <button
-                            class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300 ">
-                            <p class="font-extrabold">Contact Us</p>
-                            <span class="flex items-center font-extrabold">
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </span>
-                        </button>
+                            <button
+                                class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300">
+                                <p class="font-extrabold">Contact Us</p>
+                                <span class="flex items-center font-extrabold">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </span>
+                            </button>
                         </a>
                     </div>
                 </div>
             </nav>
         </div>
-
+    
         <!-- Mobile Menu -->
         <div class="lg:hidden mobile-nav hidden" role="dialog" aria-modal="true">
             <div class="fixed inset-0 z-50 bg-[#0b0219] opacity-80"></div>
@@ -99,12 +122,14 @@
                     </a>
                     <button type="button" class="rounded-md text-[#0b0219] menu-close">
                         <span class="sr-only">Close menu</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
+    
+                <!-- Mobile Dropdown -->
                 <div class="mt-6 flow-root text-[#0b0219]">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
@@ -113,8 +138,27 @@
                             <a href="./about.html"
                                 class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">About
                                 us</a>
-                            <a href="#"
-                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Services</a>
+    
+                            <!-- Services Dropdown -->
+                            <div class="services-dropdown">
+                                <button
+                                    class="w-full text-left block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">
+                                    Services
+                                    <svg class="inline ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+    
+                                <div class="hidden services-dropdown-content bg-white text-[#0b0219]">
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Web Design</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">SEO Services</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Digital Marketing</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Branding</a>
+                                </div>
+                            </div>
+    
                             <a href="./career.html"
                                 class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Career</a>
                             <a href="./blog.html"
@@ -124,7 +168,7 @@
                 </div>
             </div>
         </div>
-      </header>
+    </header>
       <!-- Header End -->
 
      <!-- Banner Section -->
@@ -160,7 +204,7 @@
 </div>
 
 <!-- Job Post Containers -->
-<div id="jobPosts" class="container mx-auto px-4 mb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-5 text-black">
+<div id="jobPosts" class="container mx-auto px-4 my-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-5 text-black">
     <div class="job-post" data-title="Frontend Developer">
         <h3 class="font-bold text-[25px] mb-2">Frontend Developer</h3>
         <p class="mb-3">Join our team to create cutting-edge web applications.</p>
@@ -242,54 +286,6 @@
     </div>
 </div>
 
-
-<div class="container flex justify-center gap-[50px] mx-auto my-20">
-    <div class="card">
-      <div class="card-content">
-        <h3>Product 1</h3>
-        <p>Click to reveal more details!</p>
-      </div>
-      <div class="cart">
-        <h4>Product 1 Cart</h4>
-        <button>Add to Cart</button>
-      </div>
-    </div>
-  
-    <div class="card">
-      <div class="card-content">
-        <h3>Product 2</h3>
-        <p>Click to reveal more details!</p>
-      </div>
-      <div class="cart">
-        <h4>Product 2 Cart</h4>
-        <button>Add to Cart</button>
-      </div>
-    </div>
-  
-    <div class="card">
-      <div class="card-content">
-        <h3>Product 3</h3>
-        <p>Click to reveal more details!</p>
-      </div>
-      <div class="cart">
-        <h4>Product 3 Cart</h4>
-        <button>Add to Cart</button>
-      </div>
-    </div>
-  
-    <div class="card">
-      <div class="card-content">
-        <h3>Product 4</h3>
-        <p>Click to reveal more details!</p>
-      </div>
-      <div class="cart">
-        <h4>Product 4 Cart</h4>
-        <button>Add to Cart</button>
-      </div>
-    </div>
-  </div>
-  
-
 <section x-data="
 {
 openFaq1: false, 
@@ -299,7 +295,7 @@ openFaq4: false,
 openFaq5: false, 
 openFaq6: false
 }
-" class="relative z-20 overflow-hidden    pb-12  lg:pb-[30px] container mx-auto px-4 mb-[35px]">
+" class="relative z-20 overflow-hidden    pb-20  lg:pb-[30px] container mx-auto px-4 mb-[35px]">
 <div class="container mx-auto">
  
   <div class="flex flex-wrap ">
@@ -471,18 +467,10 @@ openFaq6: false
 
 </section>
 
-<!-- footer -->
-<footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
-    <div class="text-center pb-[20px]">
-        <h1
-            class=" text-[35px] md:text-[35px] lg:text-[35px] font-bold md:font-extrabold lg:font-extrabold ciel py-[10px]">
-            <div class="load">
-                <span>C</span>
-                <span>I</span>
-                <span>E</span>
-                <span>L</span>
-            </div>
-        </h1>
+ <!-- footer -->
+ <footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
+    <div class="flex justify-center pb-[30px]">
+        <img src="./assets/images/footer-logo.png" class="h-[55px] w-auto " />
     </div>
     <hr class="pb-[20px] ">
     <div
@@ -597,6 +585,7 @@ jobSearchInput.addEventListener('input', function () {
 
 <!-- functionalities -->
 <script src="./assets/javascript/website_functionalities.js"></script>
+<script src="./assets/javascript/navbar_functionality.js"></script>
 
 </body>
 

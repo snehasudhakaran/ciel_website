@@ -26,4 +26,20 @@
 
 .subscribe  {
     border-radius: 20px !important;
+    border: 0.3px solid rgb(78, 75, 75);
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease-in-out;
 }

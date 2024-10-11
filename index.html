@@ -37,8 +37,7 @@
 
 <body class=" text-white">
 
-     <!-- Header Start -->
-     <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-white  transition-colors duration-300">
+    <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-white transition-colors duration-300">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between" aria-label="Global">
                 <!-- Logo Section -->
@@ -47,47 +46,70 @@
                         <img src="./assets/images/logo.png" alt="CIEL Logo" id="logo" class="h-[55px] w-auto">
                     </a>
                 </div>
-
+    
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden flex mobile-view-nav-menu">
                     <button type="button"
                         class="menu-button inline-flex items-center justify-center rounded-md p-2.5 text-white">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
                 </div>
-
+    
                 <!-- Desktop Menu Items -->
                 <div class="hidden lg:flex lg:gap-x-12 items-center">
                     <div class="lg:flex lg:gap-x-12">
-                        <a href="./index.html"
-                            class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
-                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About
-                            us</a>
-                        <a href="#" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Services</a>
+                        <a href="./index.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
+                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About us</a>
+    
+                        <!-- Dropdown for Services -->
+                        <div class="relative group">
+                            <a href="#"
+                                class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item flex items-center">
+                                Services
+                                <svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute hidden group-hover:block bg-white text-black rounded-lg mt-[2px] py-2 w-[200px] shadow-lg border">
+                                <a href="./all_services.html" class="block px-4 py-2 hover:bg-gray-100">All services </a>
+                                <a href="./PM_service_page.html" class="block px-4 py-2 hover:bg-gray-100">Perfomance Marketing </a>
+                                <a href="./PPC&SEM.html" class="block px-4 py-2 hover:bg-gray-100">PPC & SEM</a>
+                                <a href="./social_media_management.html" class="block px-4 py-2 hover:bg-gray-100">Branding & Social Media Management</a>
+                                <a href="./SEO.html" class="block px-4 py-2 hover:bg-gray-100">Search Engine Optimization </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Website Design & Development </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Data Analytics</a>
+                            </div>
+                        </div>
+    
                         <a href="./career.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Career</a>
                         <a href="./blog.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Blog</a>
                     </div>
+    
                     <!-- Contact Button -->
                     <div>
                         <a href="./contact.html">
-                        <button
-                            class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300 ">
-                            <p class="font-extrabold">Contact Us</p>
-                            <span class="flex items-center font-extrabold">
-                                <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </span>
-                        </button>
+                            <button
+                                class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300">
+                                <p class="font-extrabold">Contact Us</p>
+                                <span class="flex items-center font-extrabold">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </span>
+                            </button>
                         </a>
                     </div>
                 </div>
             </nav>
         </div>
-
+    
         <!-- Mobile Menu -->
         <div class="lg:hidden mobile-nav hidden" role="dialog" aria-modal="true">
             <div class="fixed inset-0 z-50 bg-[#0b0219] opacity-80"></div>
@@ -98,12 +120,14 @@
                     </a>
                     <button type="button" class="rounded-md text-[#0b0219] menu-close">
                         <span class="sr-only">Close menu</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
+    
+                <!-- Mobile Dropdown -->
                 <div class="mt-6 flow-root text-[#0b0219]">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
@@ -112,8 +136,27 @@
                             <a href="./about.html"
                                 class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">About
                                 us</a>
-                            <a href="#"
-                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Services</a>
+    
+                            <!-- Services Dropdown -->
+                            <div class="services-dropdown relative group">
+                                <button
+                                    class="w-full text-left block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">
+                                    Services
+                                    <svg class="inline ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+    
+                                <div class="hidden group-hover:block services-dropdown-content bg-white text-[#0b0219]">
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Web Design</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">SEO Services</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Digital Marketing</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Branding</a>
+                                </div>
+                            </div>
+    
                             <a href="./career.html"
                                 class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Career</a>
                             <a href="./blog.html"
@@ -124,14 +167,15 @@
             </div>
         </div>
     </header>
-    <!-- Header End -->
+    
 
     <!-- Banner Section -->
     <section
-        class="pt-[150px] md:pt-[150px] lg:pt-[150px] pb-[100px] container mx-auto px-4  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[80px] flex justify-center items-center">
+        class="pt-[150px] md:pt-[150px] lg:pt-[150px] pb-[100px] container mx-auto px-4  grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-[80px] flex justify-center items-center">
         <div class="banner-section-info">
             <div class="banner-header">
-                <h1 class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[45px]" data-aos="fade-up-right">Next-Gen Performance
+                <h1 class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[45px]"
+                    data-aos="fade-up-right">Next-Gen Performance
                 </h1>
                 <p class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[40px]" data-aos="flip-left">
                     Marketing with </p>
@@ -170,10 +214,10 @@
                         <p>Cost Efficiency and ROI </p>
                     </div>
                 </div>
-                <div  data-aos="zoom-out">
+                <div data-aos="zoom-out">
                     <button
                         class="contact-button border border-[#48c5a7] text-[#31ae90] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
-                        <p class="font-medium">Try Demo</p>
+                        <p class="font-medium">Request a Demo</p>
                     </button>
                 </div>
             </div>
@@ -234,7 +278,7 @@
 
     <!-- Binary tree -->
     <div
-        class="tree-parent text-black py-[40px] sm:py-[60px] lg:py-[60px]  px-[20px] sm:px-[30px] md:px-[60px]  lg:px-[60px]">
+        class="tree-parent text-black py-[40px] sm:py-[60px] lg:py-[100px]  px-[20px] sm:px-[30px] md:px-[60px]  lg:px-[60px] ">
         <div class="text-center text-white">
             <p class="sub-title text-[12px] lg:text-[14px] uppercase" data-aos="fade-down">SOLUTIONS</p>
             <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px]" data-aos="fade-up">
@@ -297,8 +341,206 @@
                 </li>
             </ul>
         </div>
+        <div class="flex justify-center mt-20">
+            <button
+                class="contact-button border border-[#ffffff] text-[#ffffff] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
+                <p class="font-medium">Request a Demo</p>
+            </button>
+        </div>
     </div>
+
     <!-- Binary tree -->
+
+    <!-- level up -->
+    <div class="px-10">
+    <div class="container mx-auto  pb-[50px] pb-5 ">
+        <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-2 text-center"
+            data-aos="fade-up">Level up your business!</p>
+
+        <p class="text-center mb-[70px]">Attract more clients, serve them better and keep them longer. Stop wasting time
+            and<br> money on advertising when your sales funnel is not optimized</p>
+
+        <div class="flex flex-col lg:flex-row flex-row gap-6 justify-between">
+            <div class="level-up">
+                <div class="level-up1 mb-6 " data-aos="fade-up">
+                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">24/7
+                        Accessibility</h1>
+                    <p>Unlike a physical store or office, a website is accessible 24/7, allowing customers to learn
+                        about the business, browse products or services, and make purchases at any time.</p>
+                    <p>This allows you to increase sales and revenue, especially for businesses targeting global or
+                        diverse time zones.</p>
+                </div>
+                <div class="level-up2" data-aos="fade-down">
+                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">
+                        Scalability</h1>
+                    <p>As your business grows, your website needs to evolve with it.</p>
+
+                </div>
+            </div>
+            <div class="level-up">
+                <div class="level-up3 mb-6" data-aos="fade-up">
+                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">
+                        Increased Reach</h1>
+                    <p>A well-designed website with strong SEO improves a business's online visibility, making it easier
+                        for potential customers to find them through search engines like Google.</p>
+                    <p>This increased visibility leads to more website traffic and potential customers.</p>
+                </div>
+                <div class="level-up4" data-aos="fade-down">
+                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">
+                        Effective Marketing</h1>
+                    <p>A website serves as a central hub for all marketing efforts, allowing businesses to showcase
+                        their brand identity, values, and unique selling points.</p>
+                </div>
+            </div>
+            <div class="level-up">
+                <div class="level-up5 mb-6" data-aos="fade-up">
+                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">
+                        Credibility and Trust</h1>
+                    <p>A professionally designed website with a polished appearance and user-friendly interface can
+                        instill trust and credibility to your customers.</p>
+                    <p>Reassure your customers that your business is legitimate and reliable.</p>
+                </div>
+                <div class="level-up6" data-aos="fade-down">
+                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">Data
+                        Collection & Analysis</h1>
+                    <p>We offer valuable insights into customer behavior, preferences, and demographics through Vercel
+                        Web Analytics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- level up -->
+
+    <!-- ciel logo -->
+    <div class="circle-parent-container py-10 bg-white">
+        <div class="circle-container">
+            <svg width="500" height="500" viewBox="0 0 500 500">
+                <!-- Define the shadow filter -->
+                <defs>
+                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="30" /> <!-- Increased blur to 30px -->
+                        <feOffset dx="0" dy="0" result="offsetblur" /> <!-- Shadow is centered -->
+                        <feFlood flood-color=" #004e58" /> <!-- Shadow color -->
+                        <feComposite in2="offsetblur" operator="in" />
+                        <feMerge>
+                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+
+                    <!-- Clipping path for the image inside the circle -->
+                    <clipPath id="clipCircle">
+                        <circle cx="250" cy="250" r="150" />
+                    </clipPath>
+                </defs>
+
+                <!-- 5 outer stroke circles with different delays -->
+                <circle class="circle circle1" cx="250" cy="250" r="150" fill="none" stroke="black" stroke-width="3">
+                </circle>
+                <circle class="circle circle2" cx="250" cy="250" r="150" fill="none" stroke="black" stroke-width="3">
+                </circle>
+                <circle class="circle circle3" cx="250" cy="250" r="150" fill="none" stroke="black" stroke-width="3">
+                </circle>
+
+                <!-- Center white background circle with shadow filter applied -->
+                <circle class="center-circle" cx="250" cy="250" r="50" fill="black" filter="url(#shadow)"></circle>
+
+                <!-- Add an image inside the circle covering the whole circle -->
+                <image x="100" y="100" width="300" height="300" href="./assets/images/CIEL AI LOGO .png"
+                    clip-path="url(#clipCircle)" preserveAspectRatio="xMidYMid slice" />
+
+            </svg>
+        </div>
+
+
+        <div class="flex scrolling-text">
+            <div class="grid-container">
+                <div class="text-container">
+                    <div class="text-[15px]  flex flex-col gap-y-6 overflow-hidden">
+                        <div class="scroll-wrapper flex gap-x-4">
+                            <div class="scroll-inner-text">
+                                <div class=" py-3 px-6">Unaesthetic Website</div>
+                                <div class=" py-3 px-6">Low Sales</div>
+                                <div class=" py-3 px-6">Low Traffic</div>
+                            </div>
+                            <div class="scroll-inner-text">
+                                <div class=" py-3 px-6">Unaesthetic Website</div>
+                                <div class=" py-3 px-6">Low Sales</div>
+                                <div class=" py-3 px-6">Low Traffic</div>
+                            </div>
+                        </div>
+                        <div class="scroll-wrapper flex gap-x-6">
+                            <div class="scroll-inner-text-2">
+                                <div class=" py-3 px-6">Unresponsive Website</div>
+                                <div class=" py-3 px-6">High CAC</div>
+                                <div class=" py-3 px-6">Low SEO Score</div>
+                            </div>
+                            <div class="scroll-inner-text-2">
+                                <div class=" py-3 px-6">Unresponsive Website</div>
+                                <div class=" py-3 px-6">High CAC</div>
+                                <div class=" py-3 px-6">Low SEO Score</div>
+                            </div>
+                        </div>
+                        <div class="scroll-wrapper flex gap-x-6">
+                            <div class="scroll-inner-text-3">
+                                <div class=" py-3 px-6">Slow Scheduling</div>
+                                <div class=" py-3 px-6">Slow Website</div>
+                                <div class=" py-3 px-6">Low Conversions</div>
+                            </div>
+                            <div class="scroll-inner-text-3">
+                                <div class=" py-3 px-6">Slow Scheduling</div>
+                                <div class=" py-3 px-6">Slow Website</div>
+                                <div class=" py-3 px-6">Low Conversions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-container second-container">
+                    <div class="text-[15px]  flex flex-col gap-y-6 overflow-hidden ">
+                        <div class="scroll-wrapper flex gap-x-6">
+                            <div class="scroll-inner-text">
+                                <div class=" py-3 px-6">Aesthetic Website</div>
+                                <div class=" py-3 px-6">High Sales</div>
+                                <div class=" py-3 px-6">High Traffic</div>
+                            </div>
+                            <div class="scroll-inner-text">
+                                <div class=" py-3 px-6">Aesthetic Website</div>
+                                <div class=" py-3 px-6">High Sales</div>
+                                <div class=" py-3 px-6">High Traffic</div>
+                            </div>
+                        </div>
+                        <div class="scroll-wrapper flex gap-x-6">
+                            <div class="scroll-inner-text-2">
+                                <div class=" py-3 px-6">Responsive Website</div>
+                                <div class=" py-3 px-6">Low CAC</div>
+                                <div class=" py-3 px-6">High SEO Score</div>
+                            </div>
+                            <div class="scroll-inner-text-2">
+                                <div class=" py-3 px-6">Responsive Website</div>
+                                <div class=" py-3 px-6">Low CAC</div>
+                                <div class=" py-3 px-6">High SEO Score</div>
+                            </div>
+                        </div>
+                        <div class="scroll-wrapper flex gap-x-6">
+                            <div class="scroll-inner-text-3">
+                                <div class=" py-3 px-6">Fast Scheduling</div>
+                                <div class=" py-3 px-6">Fast Website</div>
+                                <div class=" py-3 px-6">High Conversions</div>
+                            </div>
+                            <div class="scroll-inner-text-3">
+                                <div class=" py-3 px-6">Slow Scheduling</div>
+                                <div class=" py-3 px-6">Slow Website</div>
+                                <div class=" py-3 px-6">High Conversions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ciel logo -->
 
 
     <!-- table -->
@@ -423,331 +665,98 @@
     </div>
     <!-- table -->
 
-    <!-- blog -->
-    <div class="bg-white m-0">
-        <div class="container mx-auto px-4 py-[50px] pb-[70px]">
-            <h1 class="text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] font-bold text-center mb-8 text-black"
-                data-aos="fade-down">Our Latest Blogs</h1>
-            <!-- Blog Container -->
-            <div id="blog-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Dynamic blog posts will be appended here -->
-            </div>
-            <div class="text-center mt-[40px]">
-                <a href="./blog.html">
-                    <button
-                        class="button  border border-2 border-[#31ae90] text-[#31ae90] py-2 font-semibold hover:bg-[#31ae90] hover:text-white px-[30px] rounded-md"
-                        data-aos="fade-in">Explore More</button>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- blog -->
 
-    <!-- Hiring -->
-    <div class="bg-white border-t ">
-        <div
-            class=" hiring-section flex flex-col md:flex-row lg:flex-row gap-[30px] lg:justify-between md:justify-between md:items-center lg:items-center border-0 text-start container mx-auto px-4  pt-[60px]">
-            <div>
-                <h2 class="hiring-title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px]"
-                    data-aos="zoom-in">We're Hiring!</h2>
-                <p class="hiring-description text-[18px] lg:text-2xl" data-aos="zoom-in">Join our team and work on
-                    exciting projects!</p>
-            </div>
-
-            <div>
-                <a href="./career.html">
-                    <button class="apply-button" data-aos="zoom-in">Apply now 👆</button>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Hiring -->
-
-    <div class="bg-white address ">
-        <div id="button-container"
-            class="pt-[30px] pb-[70px] border-0 grid grid-cols-1 container mx-auto px-4 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-[30px] container px-4">
-            <!-- Buttons will be dynamically inserted here -->
-        </div>
-    </div>
-
-    <!-- company location -->
-    <div class="container mx-auto py-[50px]">
-        <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-[30px]"
-            data-aos="fade-up">Our Offices:</p>
-        <div id="locations-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px] justify-center">
-            <!-- Dynamic Locations Will Be Injected Here -->
-        </div>
-    </div>
-    <!-- company location -->
-
-
-    <!-- FAQ Section -->
-    <section class="container mx-auto px-4 pt-12 py-5">
+    <!-- shorts -->
+    <div class="px-10">
+    <section class="container mx-auto  pt-20 py-5">
         <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-[50px]"
-            data-aos="fade-up">Frequently Asked Questions:</p>
+            data-aos="fade-up">Shorts by CIEL:</p>
+        <div class="reels-section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ">
+            <!-- Reel 1 -->
+            <div
+                class="reel bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <video class="w-full h-94 object-cover" controls>
+                    <source src="./assets/images/reels-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
-        <div class="flex flex-col lg:flex-row gap-5 border-b border-b-1 py-5 " data-aos="fade-up">
-            <div class="w-1/2 ">
-                <h1 class="text-[15px] md:text-[30px] font-bold">About</h1>
             </div>
-            <div class="w-full">
-                 <!-- FAQ Item 1 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq1')">
-                <span class="text-lg font-medium text-gray-100">What digital marketing services do you offer?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq1" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    We offer a wide range of digital marketing services including SEO, PPC, social media marketing,
-                    email marketing, content marketing, and web design.
-                </p>
-            </div>
-        </div>
 
-        <!-- FAQ Item 2 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq2')">
-                <span class="text-lg font-medium text-gray-100">How long does it take to see results from SEO?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq2" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    SEO results typically take 3 to 6 months to become noticeable. However, the exact timeline depends
-                    on the competitiveness of your industry and the current state of your website.
-                </p>
-            </div>
-        </div>
+            <!-- Reel 2 -->
+            <div
+                class="reel bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <video class="w-full h-94 object-cover" controls>
+                    <source src="./assets/images/reels-2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
-        <!-- FAQ Item 3 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq3')">
-                <span class="text-lg font-medium text-gray-100">What is PPC, and how does it work?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq3" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    PPC (Pay-Per-Click) is a model of internet marketing where you pay a fee each time your ad is
-                    clicked. Essentially, it's a way of buying visits to your site, rather than attempting to "earn"
-                    those visits organically.
-                </p>
             </div>
-        </div>
 
-        <!-- FAQ Item 4 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq4')">
-                <span class="text-lg font-medium text-gray-100">How do you measure the success of digital marketing
-                    campaigns?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq4" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    We measure success using KPIs such as website traffic, conversion rates, ROI, click-through rates
-                    (CTR), and engagement levels. Detailed reports are provided regularly to track progress.
-                </p>
-            </div>
-        </div>
-        
-            </div>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-5 border-b border-b-1 py-5 pt-10" data-aos="fade-up">
-            <div class="w-1/2 ">
-                <h1 class="text-[15px] md:text-[30px] font-bold">Getting started</h1>
-            </div>
-            <div class="w-full">
-                 <!-- FAQ Item 1 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq5')">
-                <span class="text-lg font-medium text-gray-100">What digital marketing services do you offer?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq5" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    We offer a wide range of digital marketing services including SEO, PPC, social media marketing,
-                    email marketing, content marketing, and web design.
-                </p>
-            </div>
-        </div>
+            <!-- Reel 3 -->
+            <div
+                class="reel bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <video class="w-full h-94 object-cover" controls>
+                    <source src="./assets/images/reels-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
-        <!-- FAQ Item 2 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq6')">
-                <span class="text-lg font-medium text-gray-100">How long does it take to see results from SEO?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq6" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    SEO results typically take 3 to 6 months to become noticeable. However, the exact timeline depends
-                    on the competitiveness of your industry and the current state of your website.
-                </p>
             </div>
-        </div>
 
-        <!-- FAQ Item 3 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq7')">
-                <span class="text-lg font-medium text-gray-100">What is PPC, and how does it work?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq7" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    PPC (Pay-Per-Click) is a model of internet marketing where you pay a fee each time your ad is
-                    clicked. Essentially, it's a way of buying visits to your site, rather than attempting to "earn"
-                    those visits organically.
-                </p>
-            </div>
-        </div>
+            <!-- Reel 4 -->
+            <div
+                class="reel bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <video class="w-full h-94 object-cover" controls>
+                    <source src="./assets/images/reels-2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
-        <!-- FAQ Item 4 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq8')">
-                <span class="text-lg font-medium text-gray-100">How do you measure the success of digital marketing
-                    campaigns?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq8" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    We measure success using KPIs such as website traffic, conversion rates, ROI, click-through rates
-                    (CTR), and engagement levels. Detailed reports are provided regularly to track progress.
-                </p>
             </div>
         </div>
-        
-            </div>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-5 border-b border-b-1 py-5 pt-10" data-aos="fade-up">
-            <div class="w-1/2 ">
-                <h1 class="text-[15px] md:text-[30px] font-bold">Membership</h1>
-            </div>
-            <div class="w-full">
-                 <!-- FAQ Item 1 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq9')">
-                <span class="text-lg font-medium text-gray-100">What digital marketing services do you offer?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq9" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    We offer a wide range of digital marketing services including SEO, PPC, social media marketing,
-                    email marketing, content marketing, and web design.
-                </p>
-            </div>
-        </div>
-
-        <!-- FAQ Item 2 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq10')">
-                <span class="text-lg font-medium text-gray-100">How long does it take to see results from SEO?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq10" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    SEO results typically take 3 to 6 months to become noticeable. However, the exact timeline depends
-                    on the competitiveness of your industry and the current state of your website.
-                </p>
-            </div>
-        </div>
-
-        <!-- FAQ Item 3 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq11')">
-                <span class="text-lg font-medium text-gray-100">What is PPC, and how does it work?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq11" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    PPC (Pay-Per-Click) is a model of internet marketing where you pay a fee each time your ad is
-                    clicked. Essentially, it's a way of buying visits to your site, rather than attempting to "earn"
-                    those visits organically.
-                </p>
-            </div>
-        </div>
-
-        <!-- FAQ Item 4 -->
-        <div class="mb-6">
-            <button
-                class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
-                onclick="toggleAnswer('faq12')">
-                <span class="text-lg font-medium text-gray-100">How do you measure the success of digital marketing
-                    campaigns?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                </svg>
-            </button>
-            <div id="faq12" class="hidden mt-2 rounded-md py-5">
-                <p class="text-gray-400">
-                    We measure success using KPIs such as website traffic, conversion rates, ROI, click-through rates
-                    (CTR), and engagement levels. Detailed reports are provided regularly to track progress.
-                </p>
-            </div>
-        </div>
-        
-            </div>
-        </div>
-
     </section>
-    <!-- FAQ section -->
+    </div>
 
-    <!--  -->
-    <div class=" px-4 lg:px-20">
-        <div class="container  mx-auto  py-20 ">
+    <!-- our partners -->
+    <div class="px-10">
+    <div class="container mx-auto py-20">
+        <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-[50px]"
+            data-aos="fade-up">Our Partners:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
+            <div class="child w-full" data-aos="fade-up">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/google-ads.png" alt="Image 1">
+            </div>
+            <div class="child w-full " data-aos="fade-down">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/google-premier.png" alt="Image 2">
+            </div>
+            <div class="child w-full " data-aos="fade-up">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/amazon-badge.jpg" alt="Image 3">
+            </div>
+            <div class="child w-full " data-aos="fade-down">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/meta-business-partner.jpg" alt="Image 3">
+            </div>
+            <div class="child w-full bg-white rounded-lg" data-aos="fade-up">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/shopify-partner.png" alt="Image 2">
+            </div>
+            <div class="child w-full " data-aos="fade-down">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/Mailchimp partner.png" alt="Image 3">
+            </div>
+            <div class="child w-full " data-aos="fade-up">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/hubspot.jpg" alt="Image 3">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- what we can help with -->
+    <div class="px-10">
+    <div class="  pb-20">
+        <div class="container  mx-auto  ">
             <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-[50px]"
                 data-aos="fade-up"> What we can help you with</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-[100px] ">
@@ -791,23 +800,23 @@
                 </div>
                 <!-- Box 3 -->
                 <div class=" rounded-xl footer-box-3 py-5 px-7 " data-aos="fade-up">
-                    <div >
+                    <div>
                         <h1 class="text-[14px] text-[#FFFFFF]  text-[15px] md:text-[24px] font-bold py-3">Marketing</h1>
                         <p class="text-[#FFFFFF] text-[15px] md:text-[18px] pb-2 ">Social Media Graphics</p>
                         <p class="text-[#FFFFFF] text-[15px] md:text-[18px] pb-2 ">Email Design </p>
                         <p class="text-[#FFFFFF] text-[15px] md:text-[18px] pb-2 ">Digital Ads</p>
                         <p class="text-[#FFFFFF] text-[15px] md:text-[18px] pb-2 ">Infographics </p>
                         <p class="text-[#FFFFFF] text-[15px] md:text-[18px] pb-2 ">Email Design </p>
-                        
+
                         <p class="text-[#FFFFFF] text-[15px] md:text-[18px] pb-7 ">eBooks & digital reports </p>
                         <button
-                        class="button  border border-2 border-[#31ae90] text-[#31ae90] py-2 font-semibold hover:bg-[#31ae90] hover:text-white px-[30px] rounded-md"
-                        data-aos="fade-in">Explore More</button>
+                            class="button  border border-2 border-[#31ae90] text-[#31ae90] py-2 font-semibold hover:bg-[#31ae90] hover:text-white px-[30px] rounded-md"
+                            data-aos="fade-in">Explore More</button>
                     </div>
                 </div>
                 <!-- Box 4 -->
                 <div class=" rounded pt-5" data-aos="fade-down">
-                    <div >
+                    <div>
                         <h1 class="text-[14px] text-[#FFFFFF] py-3 text-[15px] md:text-[24px] font-bold">Marketing</h1>
                         <p class="text-[#FFFFFF] text-[15px] md:text-[18px] pb-2 ">Social Media Graphics</p>
                         <p class="text-[#FFFFFF] text-[15px] md:text-[18px] pb-2 ">Email Design </p>
@@ -820,186 +829,365 @@
             </div>
 
         </div>
-
+        <div class="flex justify-center mt-10">
+            <button
+                class="contact-button border border-[#ffffff] text-[#ffffff] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
+                <p class="font-medium">Request a Demo</p>
+            </button>
+        </div>
+    </div>
     </div>
     <!--  -->
 
-    <!--  -->
-    <div class="container mx-auto px-4 ">
-        <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-2 text-center"
-            data-aos="fade-up">Level up your business!</p>
-        
-        <p class="text-center mb-[70px]">Attract more clients, serve them better and keep them longer. Stop wasting time and<br> money on advertising when your sales funnel is not optimized</p>
-
-        <div class="flex gap-6 justify-between">
-            <div class="level-up" >
-                <div class="level-up1 mb-4 " data-aos="fade-right">
-                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">24/7 Accessibility</h1>
-                    <p>Unlike a physical store or office, a website is accessible 24/7, allowing customers to learn about the business, browse products or services, and make purchases at any time.</p>
-                    <p>This allows you to increase sales and revenue, especially for businesses targeting global or diverse time zones.</p>
-                </div>
-                <div class="level-up2" data-aos="fade-right">
-                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">Scalability</h1>
-                    <p>As your business grows, your website needs to evolve with it.</p>
-                    
-                </div>
+    <!-- blog -->
+    <div class="px-6">
+    <div class=" m-0">
+        <div class="container mx-auto px-4 pb-20 pb-[70px]">
+            <h1 class="text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] font-bold text-center mb-8 text-white"
+                data-aos="fade-down">Our Latest Blogs</h1>
+            <!-- Blog Container -->
+            <div id="blog-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamic blog posts will be appended here -->
             </div>
-            <div class="level-up">
-                <div class="level-up3 mb-4" data-aos="fade-up">
-                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">Increased Reach</h1>
-                    <p>A well-designed website with strong SEO improves a business's online visibility, making it easier for potential customers to find them through search engines like Google.</p>
-                    <p>This increased visibility leads to more website traffic and potential customers.</p>
-                </div>
-                <div class="level-up4" data-aos="fade-up">
-                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">Effective Marketing</h1>
-                    <p>A website serves as a central hub for all marketing efforts, allowing businesses to showcase their brand identity, values, and unique selling points.</p>
-                </div>
-            </div>
-            <div class="level-up">
-                <div class="level-up5 mb-4" data-aos="fade-left">
-                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">Credibility and Trust</h1>
-                    <p>A professionally designed website with a polished appearance and user-friendly interface can instill trust and credibility to your customers.</p>
-                    <p>Reassure your customers that your business is legitimate and reliable.</p>
-                </div>
-                <div class="level-up6" data-aos="fade-left">
-                    <h1 class="title font-extrabold text-[18px] sm:text-[20px] md:text-[25px] lg:text-[30px] mb-4">Data Collection & Analysis</h1>
-                    <p>We offer valuable insights into customer behavior, preferences, and demographics through Vercel Web Analytics.</p>
-                </div>
+            <div class="text-center mt-[40px]">
+                <a href="./blog.html">
+                    <button
+                        class="button  border border-2 border-[#31ae90] text-[#31ae90] py-2 font-semibold hover:bg-[#31ae90] hover:text-white px-[30px] rounded-md"
+                        data-aos="fade-in">Explore More</button>
+                </a>
             </div>
         </div>
     </div>
-    <!--  -->
+    </div>
+    <!-- blog -->
 
-    <!--  -->
-    <div class="circle-parent-container py-5">
-        <div class="circle-container ">
-            <svg width="500" height="500" viewBox="0 0 500 500">
-                <!-- Define the shadow filter -->
-                <defs>
-                    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feGaussianBlur in="SourceAlpha" stdDeviation="30" /> <!-- Increased blur to 30px -->
-                        <feOffset dx="0" dy="0" result="offsetblur" /> <!-- Shadow is centered -->
-                        <feFlood flood-color="rgba(255, 255, 255, 1)" /> <!-- Shadow color -->
-                        <feComposite in2="offsetblur" operator="in" />
-                        <feMerge>
-                            <feMergeNode />
-                            <feMergeNode in="SourceGraphic" />
-                        </feMerge>
-                    </filter>
-                </defs>
-            
-                <!-- 5 outer stroke circles with different delays -->
-                <circle class="circle circle1" cx="250" cy="250" r="150" fill="none" stroke="black" stroke-width="3"></circle>
-                <circle class="circle circle2" cx="250" cy="250" r="150" fill="none" stroke="black" stroke-width="3"></circle>
-                <circle class="circle circle3" cx="250" cy="250" r="150" fill="none" stroke="black" stroke-width="3"></circle>
-                
-                <!-- Center white background circle with shadow filter applied -->
-                <circle class="center-circle" cx="250" cy="250" r="50" fill="white" filter="url(#shadow)">
-                </circle>
-            </svg>
-            
+    <!-- Hiring -->
+    <div class="bg-white border-t ">
+        <div
+            class=" hiring-section flex flex-col md:flex-row lg:flex-row gap-[30px] lg:justify-between md:justify-between md:items-center lg:items-center border-0 text-start container mx-auto px-4  pt-[60px]">
+            <div>
+                <h2 class="hiring-title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px]"
+                    data-aos="zoom-in">We're Hiring!</h2>
+                <p class="hiring-description text-[18px] lg:text-2xl" data-aos="zoom-in">Join our team and work on
+                    exciting projects!</p>
+            </div>
+
+            <div>
+                <a href="./career.html">
+                    <button class="apply-button" data-aos="zoom-in">Apply now 👆</button>
+                </a>
+            </div>
         </div>
-        <div class="flex scrolling-text">
-            <div class="grid-container">
-                <div class="text-container">
-                    <div class="text-[15px]  flex flex-col gap-y-6 overflow-hidden  ">
-                        <div class="scroll-wrapper flex gap-x-4">
-                            <div class="scroll-inner-text">
-                                <div class=" py-3 px-6">Unaesthetic Website</div>
-                                <div class=" py-3 px-6">Low Sales</div>
-                                <div class=" py-3 px-6">Low Traffic</div>
-                            </div>
-                            <div class="scroll-inner-text">
-                                <div class=" py-3 px-6">Unaesthetic Website</div>
-                                <div class=" py-3 px-6">Low Sales</div>
-                                <div class=" py-3 px-6">Low Traffic</div>
-                            </div>
-                        </div>
-                        <div class="scroll-wrapper flex gap-x-6">
-                            <div class="scroll-inner-text-2">
-                                <div class=" py-3 px-6">Unresponsive Website</div>
-                                <div class=" py-3 px-6">High CAC</div>
-                                <div class=" py-3 px-6">Low SEO Score</div>
-                            </div>
-                            <div class="scroll-inner-text-2">
-                                <div class=" py-3 px-6">Unresponsive Website</div>
-                                <div class=" py-3 px-6">High CAC</div>
-                                <div class=" py-3 px-6">Low SEO Score</div>
-                            </div>
-                        </div>
-                        <div class="scroll-wrapper flex gap-x-6">
-                            <div class="scroll-inner-text-3">
-                                <div class=" py-3 px-6">Slow Scheduling</div>
-                                <div class=" py-3 px-6">Slow Website</div>
-                                <div class=" py-3 px-6">Low Conversions</div>
-                            </div>
-                            <div class="scroll-inner-text-3">
-                                <div class=" py-3 px-6">Slow Scheduling</div>
-                                <div class=" py-3 px-6">Slow Website</div>
-                                <div class=" py-3 px-6">Low Conversions</div>
-                            </div>
-                        </div>
+    </div>
+    <!-- Hiring -->
+
+    <div class="bg-white address ">
+        <div id="button-container"
+            class="pt-[30px] pb-[70px] border-0 grid grid-cols-1 container mx-auto px-4 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-[30px] container px-4">
+            <!-- Buttons will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="px-10">
+    <section class="container mx-auto  pt-20 py-5">
+        <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-[50px]"
+            data-aos="fade-up">Frequently Asked Questions:</p>
+
+        <div class="flex flex-col lg:flex-row gap-5 border-b border-b-1 py-5 " data-aos="fade-up">
+            <div class="w-1/2 ">
+                <h1 class="text-[15px] md:text-[30px] font-bold">About</h1>
+            </div>
+            <div class="w-full">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6">
+                    <button class="w-full text-left rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq1')">
+                        <span class="text-lg font-medium text-gray-100">What digital marketing services do you
+                            offer?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq1" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            We offer a wide range of digital marketing services including SEO, PPC, social media
+                            marketing,
+                            email marketing, content marketing, and web design.
+                        </p>
                     </div>
                 </div>
-            
-                <div class="text-container second-container">
-                    <div class="text-[15px]  flex flex-col gap-y-4 overflow-hidden ">
-                        <div class="scroll-wrapper flex gap-x-6">
-                            <div class="scroll-inner-text">
-                                <div class=" py-3 px-6">Aesthetic Website</div>
-                                <div class=" py-3 px-6">High Sales</div>
-                                <div class=" py-3 px-6">High Traffic</div>
-                            </div>
-                            <div class="scroll-inner-text">
-                                <div class=" py-3 px-6">Aesthetic Website</div>
-                                <div class=" py-3 px-6">High Sales</div>
-                                <div class=" py-3 px-6">High Traffic</div>
-                            </div>
-                        </div>
-                        <div class="scroll-wrapper flex gap-x-6">
-                            <div class="scroll-inner-text-2">
-                                <div class=" py-3 px-6">Responsive Website</div>
-                                <div class=" py-3 px-6">Low CAC</div>
-                                <div class=" py-3 px-6">High SEO Score</div>
-                            </div>
-                            <div class="scroll-inner-text-2">
-                                <div class=" py-3 px-6">Responsive Website</div>
-                                <div class=" py-3 px-6">Low CAC</div>
-                                <div class=" py-3 px-6">High SEO Score</div>
-                            </div>
-                        </div>
-                        <div class="scroll-wrapper flex gap-x-6">
-                            <div class="scroll-inner-text-3">
-                                <div class=" py-3 px-6">Fast Scheduling</div>
-                                <div class=" py-3 px-6">Fast Website</div>
-                                <div class=" py-3 px-6">High Conversions</div>
-                            </div>
-                            <div class="scroll-inner-text-3">
-                                <div class=" py-3 px-6">Slow Scheduling</div>
-                                <div class=" py-3 px-6">Slow Website</div>
-                                <div class=" py-3 px-6">High Conversions</div>
-                            </div>
-                        </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="mb-6">
+                    <button class="w-full text-left rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq2')">
+                        <span class="text-lg font-medium text-gray-100">How long does it take to see results from
+                            SEO?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq2" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            SEO results typically take 3 to 6 months to become noticeable. However, the exact timeline
+                            depends
+                            on the competitiveness of your industry and the current state of your website.
+                        </p>
                     </div>
                 </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="mb-6">
+                    <button class="w-full text-left rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq3')">
+                        <span class="text-lg font-medium text-gray-100">What is PPC, and how does it work?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq3" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            PPC (Pay-Per-Click) is a model of internet marketing where you pay a fee each time your ad
+                            is
+                            clicked. Essentially, it's a way of buying visits to your site, rather than attempting to
+                            "earn"
+                            those visits organically.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="mb-6">
+                    <button class="w-full text-left rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq4')">
+                        <span class="text-lg font-medium text-gray-100">How do you measure the success of digital
+                            marketing
+                            campaigns?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq4" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            We measure success using KPIs such as website traffic, conversion rates, ROI, click-through
+                            rates
+                            (CTR), and engagement levels. Detailed reports are provided regularly to track progress.
+                        </p>
+                    </div>
+                </div>
+
             </div>
-            
+        </div>
+        <div class="flex flex-col lg:flex-row gap-5 border-b border-b-1 py-5 pt-10" data-aos="fade-up">
+            <div class="w-1/2 ">
+                <h1 class="text-[15px] md:text-[30px] font-bold">Getting started</h1>
+            </div>
+            <div class="w-full">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6">
+                    <button class="w-full text-left rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq5')">
+                        <span class="text-lg font-medium text-gray-100">What digital marketing services do you
+                            offer?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq5" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            We offer a wide range of digital marketing services including SEO, PPC, social media
+                            marketing,
+                            email marketing, content marketing, and web design.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="mb-6">
+                    <button class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq6')">
+                        <span class="text-lg font-medium text-gray-100">How long does it take to see results from
+                            SEO?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq6" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            SEO results typically take 3 to 6 months to become noticeable. However, the exact timeline
+                            depends
+                            on the competitiveness of your industry and the current state of your website.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="mb-6">
+                    <button class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq7')">
+                        <span class="text-lg font-medium text-gray-100">What is PPC, and how does it work?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq7" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            PPC (Pay-Per-Click) is a model of internet marketing where you pay a fee each time your ad
+                            is
+                            clicked. Essentially, it's a way of buying visits to your site, rather than attempting to
+                            "earn"
+                            those visits organically.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="mb-6">
+                    <button class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq8')">
+                        <span class="text-lg font-medium text-gray-100">How do you measure the success of digital
+                            marketing
+                            campaigns?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq8" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            We measure success using KPIs such as website traffic, conversion rates, ROI, click-through
+                            rates
+                            (CTR), and engagement levels. Detailed reports are provided regularly to track progress.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-5 border-b border-b-1 py-5 pt-10" data-aos="fade-up">
+            <div class="w-1/2 ">
+                <h1 class="text-[15px] md:text-[30px] font-bold">Membership</h1>
+            </div>
+            <div class="w-full">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6">
+                    <button class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq9')">
+                        <span class="text-lg font-medium text-gray-100">What digital marketing services do you
+                            offer?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq9" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            We offer a wide range of digital marketing services including SEO, PPC, social media
+                            marketing,
+                            email marketing, content marketing, and web design.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="mb-6">
+                    <button class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq10')">
+                        <span class="text-lg font-medium text-gray-100">How long does it take to see results from
+                            SEO?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq10" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            SEO results typically take 3 to 6 months to become noticeable. However, the exact timeline
+                            depends
+                            on the competitiveness of your industry and the current state of your website.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="mb-6">
+                    <button class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq11')">
+                        <span class="text-lg font-medium text-gray-100">What is PPC, and how does it work?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq11" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            PPC (Pay-Per-Click) is a model of internet marketing where you pay a fee each time your ad
+                            is
+                            clicked. Essentially, it's a way of buying visits to your site, rather than attempting to
+                            "earn"
+                            those visits organically.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="mb-6">
+                    <button class="w-full text-left  rounded-md flex justify-between items-center focus:outline-none"
+                        onclick="toggleAnswer('faq12')">
+                        <span class="text-lg font-medium text-gray-100">How do you measure the success of digital
+                            marketing
+                            campaigns?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    </button>
+                    <div id="faq12" class="hidden mt-2 rounded-md py-5">
+                        <p class="text-gray-400">
+                            We measure success using KPIs such as website traffic, conversion rates, ROI, click-through
+                            rates
+                            (CTR), and engagement levels. Detailed reports are provided regularly to track progress.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    </div>
+    <!-- FAQ section -->
+
+    <!-- company location -->
+    <div class="px-10">
+        <div class="container mx-auto py-20">
+            <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-[30px]"
+                data-aos="fade-up">Our Offices:</p>
+            <div id="locations-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px] justify-center">
+                <!-- Dynamic Locations Will Be Injected Here -->
+            </div>
+            <div class="flex justify-center mt-10">
+                <button
+                    class="contact-button border border-[#ffffff] text-[#ffffff] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
+                    <p class="font-medium">Request a Demo</p>
+                </button>
+            </div>
         </div>
     </div>
-    <!--  -->
+    <!-- company location -->
 
     <!-- footer -->
     <footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
-        <div class="text-center pb-[20px]">
-            <h1
-                class=" text-[35px] md:text-[35px] lg:text-[35px] font-bold md:font-extrabold lg:font-extrabold ciel py-[10px]">
-                <div class="load">
-                    <span>C</span>
-                    <span>I</span>
-                    <span>E</span>
-                    <span>L</span>
-                </div>
-            </h1>
+        <div class="flex justify-center pb-[30px]">
+            <img src="./assets/images/footer-logo.png" class="h-[55px] w-auto " />
         </div>
         <hr class="pb-[20px] ">
         <div
@@ -1064,34 +1252,54 @@
 
     <script src="./assets/javascript/animation.js"></script>
 
+    <!-- functionalities -->
+    <script src="./assets/javascript/website_functionalities.js"></script>
+    <script src="./assets/javascript/navbar_functionality.js"></script>
+    <script>
+        // Fetch data from combined blog.json
+    fetch("blog.json")
+    .then((response) => response.json())
+    .then((data) => {
+        // Generate blog posts
+        const blogContainer = document.getElementById("blog-container");
+        data.slice(0, 3).forEach((blog) => {
+            const blogPost = document.createElement("div");
+            blogPost.classList.add(
+                "bg-white",
+                "rounded-lg",
+                "overflow-hidden",
+                "cursor-pointer",
+                "border",
+                "border-grey",
+                "hover-shadow",
+                "hover:border-none",
+                "p-2"
+            );
+
+            blogPost.innerHTML = `
+        <div data-aos="fade-down" class="blog-post">
+          <img class="w-full h-48 object-cover rounded-t-lg" src="${blog.image}" alt="${blog.title}">
+          <div class="p-6">
+            <h2 class="text-2xl text-black font-bold mb-2">${blog.title}</h2>
+            <p class="text-gray-700 mb-4">${blog.description}</p>
+            <a href="${blog.link}" class="text-indigo-500 hover:text-indigo-700 font-bold">Read More &rarr;</a>
+          </div>
+        </div>
+      `;
+
+            // Append blog post to the container
+            blogContainer.appendChild(blogPost);
+        });
+
+    })
+    .catch((error) => console.error("Error fetching data:", error));
+    </script>
+
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
-
-    <!-- script for navbar-->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuButton = document.querySelector(".menu-button");
-            const menuCloseButton = document.querySelector(".menu-close");
-            const mobileNav = document.querySelector(".mobile-nav");
-
-            // Open the mobile menu
-            menuButton.addEventListener("click", function () {
-                mobileNav.classList.remove("hidden");
-            });
-
-            // Close the mobile menu
-            menuCloseButton.addEventListener("click", function () {
-                mobileNav.classList.add("hidden");
-            });
-        });
-    </script>
-    <!-- script -->
-
-    <!-- functionalities -->
-    <script src="./assets/javascript/website_functionalities.js"></script>
 
 </body>
 

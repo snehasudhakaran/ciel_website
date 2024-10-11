@@ -23,7 +23,7 @@
 }
 
 .about-quotes{
-    background: linear-gradient(to right top, #093039, #073a43, #04444e, #004e58);
+   
     position: relative;
 }
 
@@ -38,9 +38,52 @@
 }
 
 .team-member{
-    background: linear-gradient(to right top, #0d2026, #0c2830, #093039, #073a43, #04444e, #004e58);
+    background: #2f43454d !important;
     color:white;
+    border-radius: 10px;
+    border: 0.3px solid rgb(78, 75, 75);
 }
+
+.team-member {
+    position: relative;
+    overflow: hidden; /* To contain the pseudo-element inside the container */
+    cursor: pointer;
+  }
+  
+  .team-member::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background:#31ae90;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease; /* Animation from center to full size */
+    border-radius: inherit; /* Match the parent container's border-radius */
+  }
+  
+  .team-member:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .team-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(235, 232, 232);
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Fade-in effect */
+  }
+  
+  .team-member:hover .team-info {
+    opacity: 1;
+  }
+  
 
 .timeline{
     position:relative;
@@ -167,4 +210,5 @@
 
 .subscribe  {
     border-radius: 20px !important;
+    border: 0.3px solid rgb(78, 75, 75);
 }

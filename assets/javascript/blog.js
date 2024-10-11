@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize AOS (Animate On Scroll)
-    AOS.init();
 
     // Fetch data from combined blog.json
     fetch("blog.json")

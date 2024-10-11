@@ -37,8 +37,8 @@
 </head>
 
 <body class="text-white">
-    <!-- Header Start -->
-    <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-black  transition-colors duration-300 bg-white">
+    <!-- header -->
+    <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-black transition-colors duration-300 bg-white">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between" aria-label="Global">
                 <!-- Logo Section -->
@@ -47,37 +47,59 @@
                         <img src="./assets/images/logoBlack.png" alt="CIEL Logo" id="logo" class="h-[55px] w-auto">
                     </a>
                 </div>
-
+    
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden flex mobile-view-nav-menu">
                     <button type="button"
                         class="menu-button inline-flex items-center justify-center rounded-md p-2.5 text-white">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
                 </div>
-
+    
                 <!-- Desktop Menu Items -->
                 <div class="hidden lg:flex lg:gap-x-12 items-center">
                     <div class="lg:flex lg:gap-x-12">
-                        <a href="./index.html"
-                            class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
-                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About
-                            us</a>
-                        <a href="#" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Services</a>
+                        <a href="./index.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
+                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About us</a>
+    
+                        <!-- Dropdown for Services -->
+                        <div class="relative group">
+                            <a href="#"
+                                class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item flex items-center">
+                                Services
+                                <svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute hidden group-hover:block bg-white text-black rounded-lg mt-[2px] py-2 w-[200px] shadow-lg border">
+                                <a href="./all_services.html" class="block px-4 py-2 hover:bg-gray-100">All services </a>
+                                <a href="./PM_service_page.html" class="block px-4 py-2 hover:bg-gray-100">Perfomance Marketing </a>
+                                <a href="./PPC&SEM.html" class="block px-4 py-2 hover:bg-gray-100">PPC & SEM</a>
+                                <a href="./social_media_management.html" class="block px-4 py-2 hover:bg-gray-100">Branding & Social Media Management</a>
+                                <a href="./SEO.html" class="block px-4 py-2 hover:bg-gray-100">Search Engine Optimization </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Website Design & Development </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Data Analytics</a>
+                            </div>
+                        </div>
+    
                         <a href="./career.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Career</a>
                         <a href="./blog.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Blog</a>
                     </div>
+    
                     <!-- Contact Button -->
                     <div>
                         <a href="./contact.html">
-
                             <button
-                                class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300 ">
+                                class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300">
                                 <p class="font-extrabold">Contact Us</p>
                                 <span class="flex items-center font-extrabold">
                                     <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -88,7 +110,7 @@
                 </div>
             </nav>
         </div>
-
+    
         <!-- Mobile Menu -->
         <div class="lg:hidden mobile-nav hidden" role="dialog" aria-modal="true">
             <div class="fixed inset-0 z-50 bg-[#0b0219] opacity-80"></div>
@@ -99,12 +121,14 @@
                     </a>
                     <button type="button" class="rounded-md text-[#0b0219] menu-close">
                         <span class="sr-only">Close menu</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
+    
+                <!-- Mobile Dropdown -->
                 <div class="mt-6 flow-root text-[#0b0219]">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
@@ -113,8 +137,27 @@
                             <a href="./about.html"
                                 class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">About
                                 us</a>
-                            <a href="#"
-                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Services</a>
+    
+                            <!-- Services Dropdown -->
+                            <div class="services-dropdown">
+                                <button
+                                    class="w-full text-left block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">
+                                    Services
+                                    <svg class="inline ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+    
+                                <div class="hidden services-dropdown-content bg-white text-[#0b0219]">
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Web Design</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">SEO Services</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Digital Marketing</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Branding</a>
+                                </div>
+                            </div>
+    
                             <a href="./career.html"
                                 class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Career</a>
                             <a href="./blog.html"
@@ -125,7 +168,6 @@
             </div>
         </div>
     </header>
-    <!-- Header End -->
 
     <!-- Banner Section -->
     <!-- <section
@@ -161,7 +203,7 @@
             Your browser does not support the video tag.
         </video>
         <!-- Your content goes here -->
-        <div class="content banner-section-info absolute top-[300px] pb-[100px] w-full flex justify-end px-20">
+        <div class="content banner-section-info absolute top-[140px] lg:top-[390px] pb-[100px] w-full flex justify-end px-20">
             <div class="banner-section-info ">
                 <div class="banner-header text-center">
                     <h1 class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[45px] " data-aos="flip-right">Next-Gen Performance
@@ -172,14 +214,14 @@
                         CIEL.AI
                     </h1>
     
-                    <div class="flex gap-5 justify-center items-center mt-[50px]">
+                    <div class="flex gap-5 justify-center items-center mt-[50px] hidden md:block">
                         <button data-aos="fade-up-left"
-                            class="contact-button  bg-[#31ae90] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
-                            <p class="font-medium">Contact Us</p>
+                            class="contact-button border border-[#31ae90] bg-[#31ae90] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[transparent] hover:text-[#31ae90]  hover:border-[#31ae90] transition-colors duration-300 ">
+                            <p class="">Partner with Us</p>
                         </button>
                         <button data-aos="fade-up-right"
-                            class="contact-button border border-[#FFFFFF] text-[#FFFFFF] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
-                            <p class="font-medium">Contact Us</p>
+                            class="contact-button border border-[#FFFFFF] hover:border-[#31ae90] text-[#FFFFFF] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
+                            <p class="font-medium">Get a Proposal</p>
                         </button>
                     </div>
                 </div>
@@ -193,36 +235,13 @@
                 long-term success.</p>
         </div>
         <div
-            class="flex-2 bg-white text-black py-4 justify-center items-center px-6 flex justify-center items-center border-2">
-            <button class="cursor-pointer text-[20px] font-semibold">Contact Us</button>
+            class="flex-2 bg-white text-[#31ae90] py-4 justify-center items-center px-6 flex justify-center items-center border-2">
+            <button class="cursor-pointer text-[20px] font-semibold">Connect with Us</button>
         </div>
     </section>
-
-    <!-- About us -->
-    <section class="px-8 bg-white text-black py-20">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 container mx-auto">
-            <div>
-                <img src="./assets/images/about-us.png" class="rounded shadow-xl hover-shadow" />
-            </div>
-            <div class="flex flex-col gap-y-4">
-                
-                <h1 class=" font-bold text-[#31ae90] text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px]">About us </h1>
-                <p class="">At Ciel, we are more than just a digital marketing agency—we are your strategic partner in growth. With years of experience in the ever-evolving digital landscape, we understand that each business is unique and requires a tailored approach to stand out. Our team of passionate marketers, strategists, and creatives work collaboratively to design customized marketing solutions that not only boost your online presence but also deliver tangible, measurable results.
-                <p>
-                    From innovative social media campaigns and search engine optimization to data-driven paid advertising strategies, we combine creativity with analytics to help your brand achieve sustainable growth. 
-                </p> 
-                        
-                </p>
-                <p><span class="font-bold">Our mission is simple:</span> to help businesses of all sizes navigate the complexities of the digital world, drive meaningful engagement, and ultimately convert opportunities into long-term success.</p>
-
-                <!-- <p>We believe in building relationships that go beyond the typical client-vendor dynamic. Through transparency, consistent communication, and a deep understanding of your business goals, we aim to foster trust and deliver solutions that drive meaningful impact. </p> -->
-            </div>
-        </div>
-    </section>
-    <!-- About us -->
 
     <!-- our story -->
-    <div class="container mx-auto mt-20">
+    <div class="container mx-auto mt-28">
         <p class="uppercase text-white text-center font-medium ">Our Story</p>
                 <h1 class=" font-bold text-center text-white text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px]">How it started </h1>
        <div class="timeline text-black">
@@ -436,17 +455,17 @@
     <!-- why choose us -->
 
     <!-- What we do -->
-    <div class="px-4">
+    <div class="px-4 py-6 md:py-20">
         <div class="flex flex-col justify-center items-center md:flex-row gap-8 container mx-auto ">
     
             <!-- First Container with Content -->
-            <div class="flex-2  p-6 ">
+            <div class="flex-2  p-6  ">
                 <p class="uppercase text-[#FFFFFF] font-medium pb-1"  data-aos="fade-down">What we do</p>
                     <h1 class=" font-bold text-[#FFFFFF]  text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] pb-4"  data-aos="fade-down">Help your brand<br> grow</h1>
                 <p class="pb-8"  data-aos="fade-down">Grow your brand with our scalable and tactical<br> marketing solutions</p>
                 <button
                         class="transition-colors button  border border-2 border-[#31ae90]  py-2  bg-[#31ae90]  hover:text-[#31ae90] hover:bg-[transparent]  text-white px-[30px] rounded-md duration-300"
-                        data-aos="fade-down">Explore More</button>
+                        data-aos="fade-down">Book a Meeting</button>
             </div>
     
             <!-- Second Container with Nested Rows -->
@@ -524,19 +543,22 @@
     <!-- What we do -->
 
     <!-- Meet Our Team Section -->
-    <!-- <section class="py-20 bg-white text-black">
+    <section class=" py-6 md:py-20  text-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] md:text-4xl font-bold mb-4 text-[#31ae90]">Meet Our Team</h2>
-                <p class="text-2xl  text-[#004e58]">We are a team of dedicated professionals ready to help you succeed.</p>
-            </div> -->
+                <h2 class="text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] md:text-4xl font-bold mb-4 " data-aos="fade-down">Meet Our Team</h2>
+                <p class="text-2xl " data-aos="fade-down">We are a team of dedicated professionals ready to help you succeed.</p>
+            </div>
 
             <!-- Team Members Grid -->
-            <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"> -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" >
                 
                 <!-- Team Member 1 -->
-                <!-- <div class="bg-white border rounded-lg hover-shadow shadow-lg p-6 text-center team-member">
-                    <img class="w-32 h-32 mx-auto rounded-full mb-4" src="https://via.placeholder.com/150" alt="Team Member">
+                <div class="  text-center" data-aos="fade-up">
+                    <div class="bg-white  rounded-lg  p-6 text-center team-member mb-5">
+                    <img class="w-32 h-32 mx-auto rounded-full mb-4" src="./assets/images/avatar-3.jpg" alt="Team Member">
+                    <div class="team-info">John Doe</div>
+                   </div>
                     <h3 class="text-xl font-semibold mb-2">John Doe</h3>
                     <p class="text-gray-400 mb-4">Chief Executive Officer</p>
                     <div class="flex justify-center space-x-4 text-white-500 ">
@@ -544,11 +566,14 @@
                         <a href="#" class=""><ion-icon name="logo-twitter"></ion-icon></a>
                         <a href="#" class=""><ion-icon name="logo-github"></ion-icon></a>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- Team Member 2 -->
-                <!-- <div class="bg-white border rounded-lg shadow-lg p-6 text-center hover-shadow team-member">
-                    <img class="w-32 h-32 mx-auto rounded-full mb-4" src="https://via.placeholder.com/150" alt="Team Member">
+                <div class=" text-center  " data-aos="fade-down">
+                    <div class="bg-white  rounded-lg  p-6 text-center team-member mb-5">
+                        <img class="w-32 h-32 mx-auto rounded-full mb-4" src="./assets/images/avatar-3.jpg" alt="Team Member">
+                        <div class="team-info">John Doe</div>
+                       </div>
                     <h3 class="text-xl font-semibold mb-2">Jane Smith</h3>
                     <p class="text-gray-400 mb-4">Head of Marketing</p>
                     <div class="flex justify-center space-x-4 text-white-500 ">
@@ -556,11 +581,15 @@
                         <a href="#" class=""><ion-icon name="logo-twitter"></ion-icon></a>
                         <a href="#" class=""><ion-icon name="logo-github"></ion-icon></a>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- Team Member 3 -->
-                <!-- <div class="bg-white border rounded-lg shadow-lg p-6 text-center hover-shadow team-member">
-                    <img class="w-32 h-32 mx-auto rounded-full mb-4" src="https://via.placeholder.com/150" alt="Team Member">
+                <div class=" text-center  " data-aos="fade-up">
+                    <div class="bg-white  rounded-lg  p-6 text-center team-member mb-5">
+                        <img class="w-32 h-32 mx-auto rounded-full mb-4" src="./assets/images/avatar-3.jpg" alt="Team Member">
+
+                        <div class="team-info">John Doe</div>
+                       </div>
                     <h3 class="text-xl font-semibold mb-2">Mike Johnson</h3>
                     <p class="text-gray-400 mb-4">Lead Developer</p>
                     <div class="flex justify-center space-x-4 text-white-500 ">
@@ -568,11 +597,14 @@
                         <a href="#" class=""><ion-icon name="logo-twitter"></ion-icon></a>
                         <a href="#" class=""><ion-icon name="logo-github"></ion-icon></a>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- Team Member 4 -->
-                <!-- <div class="bg-white border rounded-lg shadow-lg p-6 text-center hover-shadow team-member">
-                    <img class="w-32 h-32 mx-auto rounded-full mb-4" src="https://via.placeholder.com/150" alt="Team Member">
+                <div class=" text-center " data-aos="fade-down">
+                    <div class="bg-white p-6 text-center team-member mb-5">
+                        <img class="w-32 h-32 mx-auto rounded-full mb-4" src="./assets/images/avatar-3.jpg" alt="Team Member">
+                        <div class="team-info">John Doe</div>
+                       </div>
                     <h3 class="text-xl font-semibold mb-2">Emily Brown</h3>
                     <p class="text-gray-400 mb-4">Product Designer</p>
                     <div class="flex justify-center space-x-4 text-white-500 ">
@@ -580,40 +612,32 @@
                         <a href="#" class=""><ion-icon name="logo-twitter"></ion-icon></a>
                         <a href="#" class=""><ion-icon name="logo-github"></ion-icon></a>
                     </div>
-                </div> -->
+                </div>
 
-            <!-- </div>
+            </div>
         </div>
-    </section> -->
+    </section>
     <!-- Meet Our Team Section -->
 
     <!-- stats -->
-    <div class="px-4 ">
+    <div class="px-4 " data-aos="fade-up">
         <div class="container mx-auto bg-[#2f43454d] py-10 subscribe  rounded px-10 my-20 text-center">
             <h2 class="text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] md:text-4xl font-bold mb-4  mb-2">Get started now!</h2>
             <p class="text-2xl   mb-10 ">Don’t get left behind in this digital revolution</p>
             <div class="flex justify-center">
                 <button
                             class="contact-button hover:border hover:border-[#48c5a7] hover:text-[#31ae90] px-[30px] py-2 rounded-md flex items-center gap-2 bg-[#31ae90] hover:bg-[transparent] text-[white] transition-colors duration-300 ">
-                            <p class="font-medium">Contact Us</p>
+                            <p class="font-medium">Request a Demo</p>
                         </button>
             </div>
         </div>
     </div>
     <!-- stats -->
 
-    <!-- footer -->
-    <footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
-        <div class="text-center pb-[20px]">
-            <h1
-                class=" text-[35px] md:text-[35px] lg:text-[35px] font-bold md:font-extrabold lg:font-extrabold ciel py-[10px]">
-                <div class="load">
-                    <span>C</span>
-                    <span>I</span>
-                    <span>E</span>
-                    <span>L</span>
-                </div>
-            </h1>
+     <!-- footer -->
+     <footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
+        <div class="flex justify-center pb-[30px]">
+            <img src="./assets/images/footer-logo.png" class="h-[55px] w-auto " />
         </div>
         <hr class="pb-[20px] ">
         <div
@@ -712,24 +736,7 @@
         showSlide(currentIndex); // Show the initial slide
     </script>
 
-    <!-- script for navbar-->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuButton = document.querySelector(".menu-button");
-            const menuCloseButton = document.querySelector(".menu-close");
-            const mobileNav = document.querySelector(".mobile-nav");
-
-            // Open the mobile menu
-            menuButton.addEventListener("click", function () {
-                mobileNav.classList.remove("hidden");
-            });
-
-            // Close the mobile menu
-            menuCloseButton.addEventListener("click", function () {
-                mobileNav.classList.add("hidden");
-            });
-        });
-    </script>
+   
     <script>
         // JavaScript to add animation on scroll
         const timelineItems = document.querySelectorAll('.timeline-item');
@@ -754,6 +761,24 @@
     </script>
     <!-- script -->
     <script src="./assets/javascript/about-functionalities.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuButton = document.querySelector(".menu-button");
+            const menuCloseButton = document.querySelector(".menu-close");
+            const mobileNav = document.querySelector(".mobile-nav");
+        
+            // Open the mobile menu
+            menuButton.addEventListener("click", function () {
+                mobileNav.classList.remove("hidden");
+            });
+        
+            // Close the mobile menu
+            menuCloseButton.addEventListener("click", function () {
+                mobileNav.classList.add("hidden");
+            });
+        });
+    </script>
+
 
 </body>
 

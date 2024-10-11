@@ -26,6 +26,7 @@
     <!-- custom css -->
     <link rel="stylesheet" href="./assets/css/index.css" />
     <link rel="stylesheet" href="./assets/css/blog.css" />
+    <link rel="stylesheet" href="./assets/css/allservices.css" />
 
     <!-- animation -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -34,12 +35,15 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
+    <!-- Icons are using Material Icons, you can import the Material Icons library -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body class=" text-white">
 
     <!-- Header Start -->
-    <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-black  transition-colors duration-300 bg-white">
+    <header class="header fixed inset-x-0 top-0 z-50 py-4 px-4 w-full text-black bg-white transition-colors duration-300">
         <div class="container mx-auto px-4">
             <nav class="flex items-center justify-between" aria-label="Global">
                 <!-- Logo Section -->
@@ -48,37 +52,59 @@
                         <img src="./assets/images/logoBlack.png" alt="CIEL Logo" id="logo" class="h-[55px] w-auto">
                     </a>
                 </div>
-
+    
                 <!-- Mobile Menu Button -->
                 <div class="lg:hidden flex mobile-view-nav-menu">
                     <button type="button"
                         class="menu-button inline-flex items-center justify-center rounded-md p-2.5 text-white">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
                 </div>
-
+    
                 <!-- Desktop Menu Items -->
                 <div class="hidden lg:flex lg:gap-x-12 items-center">
                     <div class="lg:flex lg:gap-x-12">
-                        <a href="./index.html"
-                            class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
-                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About
-                            us</a>
-                        <a href="#" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Services</a>
+                        <a href="./index.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Home</a>
+                        <a href="./about.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">About us</a>
+    
+                        <!-- Dropdown for Services -->
+                        <div class="relative group">
+                            <a href="#"
+                                class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item flex items-center">
+                                Services
+                                <svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </a>
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute hidden group-hover:block bg-white text-black rounded-lg mt-[2px] py-2 w-[200px] shadow-lg border">
+                                <a href="./all_services.html" class="block px-4 py-2 hover:bg-gray-100">All services </a>
+                                <a href="./PM_service_page.html" class="block px-4 py-2 hover:bg-gray-100">Perfomance Marketing </a>
+                                <a href="./PPC&SEM.html" class="block px-4 py-2 hover:bg-gray-100">PPC & SEM</a>
+                                <a href="./social_media_management.html" class="block px-4 py-2 hover:bg-gray-100">Branding & Social Media Management</a>
+                                <a href="./SEO.html" class="block px-4 py-2 hover:bg-gray-100">Search Engine Optimization </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Website Design & Development </a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Data Analytics</a>
+                            </div>
+                        </div>
+    
                         <a href="./career.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Career</a>
                         <a href="./blog.html" class="text-[16px] lg:text-[18px] hover:text-[#31ae90] menu-item">Blog</a>
                     </div>
+    
                     <!-- Contact Button -->
                     <div>
                         <a href="./contact.html">
-
                             <button
-                                class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300 ">
+                                class="contact-button bg-[#48c5a7] text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-white hover:text-[#31ae90] border border-transparent transition-colors duration-300">
                                 <p class="font-extrabold">Contact Us</p>
                                 <span class="flex items-center font-extrabold">
                                     <ion-icon name="arrow-forward-outline"></ion-icon>
@@ -89,7 +115,7 @@
                 </div>
             </nav>
         </div>
-
+    
         <!-- Mobile Menu -->
         <div class="lg:hidden mobile-nav hidden" role="dialog" aria-modal="true">
             <div class="fixed inset-0 z-50 bg-[#0b0219] opacity-80"></div>
@@ -100,12 +126,14 @@
                     </a>
                     <button type="button" class="rounded-md text-[#0b0219] menu-close">
                         <span class="sr-only">Close menu</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
+    
+                <!-- Mobile Dropdown -->
                 <div class="mt-6 flow-root text-[#0b0219]">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
@@ -114,8 +142,27 @@
                             <a href="./about.html"
                                 class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">About
                                 us</a>
-                            <a href="#"
-                                class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Services</a>
+    
+                            <!-- Services Dropdown -->
+                            <div class="services-dropdown">
+                                <button
+                                    class="w-full text-left block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">
+                                    Services
+                                    <svg class="inline ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+    
+                                <div class="hidden services-dropdown-content bg-white text-[#0b0219]">
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Web Design</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">SEO Services</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Digital Marketing</a>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">Branding</a>
+                                </div>
+                            </div>
+    
                             <a href="./career.html"
                                 class="block px-3 py-2 rounded-md text-lg font-semibold hover:bg-gray-50 hover:text-[#0b0219]">Career</a>
                             <a href="./blog.html"
@@ -128,8 +175,8 @@
     </header>
     <!-- Header End -->
 
-    <div class="video-background-container relative w-100 ">
-        <video autoplay muted loop class="video-background w-full">
+    <div class="video-background-container relative w-[100%] ">
+        <video autoplay muted loop class="video-background w-full ">
             <source src="./assets/images/blog-post.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -137,18 +184,22 @@
        <div class="content banner-section-info absolute top-[300px] pb-[100px] w-full">
             <div class="banner-section-info ">
                 <div class="banner-header text-center">
-                    <h1 class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[45px]" data-aos="flip-right">Discover the Latest Trends and Insights in 
+                    <p class="mb-5 text-[#31ae90] font-bold ">SOLUTIONS</p>
+                    <h1 class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[45px] mb-10" data-aos="flip-right">We help companies optimize,<br>
+                        grow, and transform.
                     </h1>
-                    <p class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[40px] mb-6" data-aos="flip-left">
-                        Digital Marketing </p>
                     
-                    <p>Explore the latest trends, tips, and strategies in digital marketing. From SEO and social media to content<br> marketing and paid ads, our blog is your go-to resource for staying informed<br> and making smarter decisions for your brand’s growth. </p>
+                    <div class="w-[70px] h-[4px] bg-[#31ae90] d-block mx-auto mb-10 "></div>
+                    
+                    <p class=" hidden md:block">We're specialists, not generalists. Our company was built to provide deep expertise in
+                        digital channels that<br> are extremely complex, and changing daily. We offer integrated<br>
+                        solutions with unique services and deliverables tailored to unlock full-funnel growth. </p>
                 
                     <div class="flex gap-5 justify-center items-center mt-[50px]">
                         <a href="#blog">
                         <button data-aos="fade-up-left"
                             class="contact-button  bg-[#31ae90] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">
-                            <p class="font-medium">Read More</p>
+                            <p class="font-medium">Contact Us</p>
                         </button>
                         </a>
                     </div>
@@ -157,20 +208,334 @@
         </div> 
     </div>
 
-    
+    <div class="bg-[#31ae90] text-white py-5">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            <!-- Heading Section -->
+            <div class="text-3xl md:text-4xl font-bold flex flex-col items-center md:items-start">
+                <h1 id="dynamic-heading" class="text-center md:text-left">
+                    Boost Your SEO Performance
+                </h1>
+            </div>
 
-    <!-- footer -->
-    <footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
-        <div class="text-center pb-[20px]">
-            <h1
-                class=" text-[35px] md:text-[35px] lg:text-[35px] font-bold md:font-extrabold lg:font-extrabold ciel py-[10px]">
-                <div class="load">
-                    <span>C</span>
-                    <span>I</span>
-                    <span>E</span>
-                    <span>L</span>
+            <!-- Button Section -->
+            <div class="ml-0 md:ml-8 mt-4 md:mt-0">
+                <button
+                    class="bg-white text-[#31ae90] font-semibold py-2 px-6 rounded-lg hover:bg-[transparent] border hover:border-white hover:text-white transition duration-300">
+                    Get Your Proposal
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 py-20 bg-[#2f43454d] delivery-model">
+        <div class="container mx-auto">
+            <div class="banner-section-info ">
+                <div class="banner-header text-center">
+                    <p class="mb-5 text-[#31ae90] font-bold ">DELIVERY MODEL</p>
+                    <h1 class="text-[20px] sm:text-[25px] font-extrabold md:text-[30px] lg:text-[45px] mb-10" data-aos="flip-right">End-to-end digital marketing<br>
+                        solutions.
+                    </h1>
+                    
+                    <div class="w-[70px] h-[4px] bg-[#31ae90] d-block mx-auto mb-10"></div>
+                    
+                    <p>Our creative capabilities differentiate our work, throughout the funnel, across platforms,<br>
+                        devices and digital marketing channels. </p>
+
+                        <div class="ml-0 md:ml-8 mt-8 ">
+                            <button
+                                class="bg-[transparent] text-[#31ae90] font-semibold py-2 px-6 rounded-lg hover:bg-[transparent] border border-[#31ae90] hover:border-white hover:text-white transition duration-300">
+                                Get Free Consultation
+                            </button>
+                        </div>
                 </div>
-            </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-10">
+    <div class="container mx-auto px-4 pt-20">
+
+        <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-[50px]"
+            data-aos="fade-up">Our Services:</p>
+        <!-- Card Grid Container -->
+        <div id="card-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  mb-6">
+          <!-- Social Media Marketing -->
+          <div class=" shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+            <div class="flex items-center mb-4">
+            <span class="material-icons text-white text-4xl mr-3">share</span>
+            <h3 class="text-xl font-bold">Social Media Marketing</h3>
+            </div>
+            <p class="mb-4">Grow your online presence and engage with your audience through strategic social media campaigns.</p>
+            <ul class="list-disc pl-5">
+            <li>Social strategy</li>
+            <li>Paid ads (Facebook, Instagram, LinkedIn)</li>
+            <li>Organic content creation</li>
+            <li>Influencer partnerships</li>
+            </ul>
+        </div>
+  
+        <!-- Search Engine Optimization (SEO) -->
+        <div class=" shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+            <div class="flex items-center mb-4">
+            <span class="material-icons text-white text-4xl mr-3">search</span>
+            <h3 class="text-xl font-bold">Search Engine Optimization (SEO)</h3>
+            </div>
+            <p class="mb-4">Maximize your website’s visibility with our comprehensive SEO services.</p>
+            <ul class="list-disc pl-5">
+            <li>Keyword research & strategy</li>
+            <li>On-page and off-page SEO</li>
+            <li>Local SEO</li>
+            <li>Technical SEO audits</li>
+            </ul>
+        </div>
+  
+        <!-- Performance Marketing -->
+        <div class=" shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+            <div class="flex items-center mb-4">
+            <span class="material-icons text-white text-4xl mr-3">trending_up</span>
+            <h3 class="text-xl font-bold">Performance Marketing</h3>
+            </div>
+            <p class="mb-4">Data-driven performance marketing to maximize your ROI.</p>
+            <ul class="list-disc pl-5">
+            <li>Google Ads & Bing Ads</li>
+            <li>Programmatic display ads</li>
+            <li>Conversion optimization</li>
+            <li>Retargeting campaigns</li>
+            </ul>
+        </div>
+        </div>
+      
+        <!-- Hidden Cards Container (Initially Hidden) -->
+        <div id="more-cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-8 hidden">
+         <!-- Content Production -->
+         <div class=" shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+            <div class="flex items-center mb-4">
+            <span class="material-icons text-white text-4xl mr-3">description</span>
+            <h3 class="text-xl font-bold">Content Production</h3>
+            </div>
+            <p class="mb-4">Stand out with high-quality content that resonates with your audience.</p>
+            <ul class="list-disc pl-5">
+            <li>Blog writing</li>
+            <li>Social media content</li>
+            <li>Email copy</li>
+            <li>Case studies & whitepapers</li>
+            </ul>
+            </div>
+
+            <!-- Video & Product Photography -->
+    <div class=" shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+        <div class="flex items-center mb-4">
+          <span class="material-icons text-white text-4xl mr-3">photo_camera</span>
+          <h3 class="text-xl font-bold">Video & Product Photography</h3>
+        </div>
+        <p class="mb-4">Elevate your brand with professional video and product photography services.</p>
+        <ul class="list-disc pl-5">
+          <li>Product photoshoots</li>
+          <li>Promotional videos</li>
+          <li>Behind-the-scenes content</li>
+          <li>Editing and post-production</li>
+        </ul>
+      </div>
+  
+      <!-- Print & OOH Advertising -->
+      <div class=" shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+        <div class="flex items-center mb-4">
+          <span class="material-icons text-white text-4xl mr-3">public</span>
+          <h3 class="text-xl font-bold">Print & OOH Advertising</h3>
+        </div>
+        <p class="mb-4">Reach your audience beyond the screen with our print and OOH advertising solutions.</p>
+        <ul class="list-disc pl-5">
+          <li>Billboard & poster design</li>
+          <li>Brochures & flyers</li>
+          <li>Magazine & newspaper ads</li>
+          <li>Transit and street-level ads</li>
+        </ul>
+      </div>
+  
+      <!-- Mainline Advertising -->
+      <div class="shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+        <div class="flex items-center mb-4">
+          <span class="material-icons text-white text-4xl mr-3">tv</span>
+          <h3 class="text-xl font-bold">Mainline Advertising</h3>
+        </div>
+        <p class="mb-4">Build powerful traditional ad campaigns with our mainline advertising services.</p>
+        <ul class="list-disc pl-5">
+          <li>TV commercials</li>
+          <li>Radio ads</li>
+          <li>Print ads</li>
+          <li>Scriptwriting & production</li>
+        </ul>
+      </div>
+  
+      <!-- Web Design & Development -->
+      <div class="shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+        <div class="flex items-center mb-4">
+          <span class="material-icons text-white text-4xl mr-3">computer</span>
+          <h3 class="text-xl font-bold">Web Design & Development</h3>
+        </div>
+        <p class="mb-4">Create a seamless online experience with a custom-designed website.</p>
+        <ul class="list-disc pl-5">
+          <li>Custom web design</li>
+          <li>Mobile optimization</li>
+          <li>UX/UI design</li>
+          <li>eCommerce functionality</li>
+        </ul>
+      </div>
+  
+      <!-- Email Marketing -->
+      <div class=" shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+        <div class="flex items-center mb-4">
+          <span class="material-icons text-white text-4xl mr-3">email</span>
+          <h3 class="text-xl font-bold">Email Marketing</h3>
+        </div>
+        <p class="mb-4">Engage your audience directly with personalized email marketing campaigns.</p>
+        <ul class="list-disc pl-5">
+          <li>Email automation</li>
+          <li>Newsletter campaigns</li>
+          <li>List segmentation</li>
+          <li>A/B testing</li>
+        </ul>
+      </div>
+  
+      <!-- Marketing Automation & Chatbots -->
+      <div class=" shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+        <div class="flex items-center mb-4">
+          <span class="material-icons text-white text-4xl mr-3">chat</span>
+          <h3 class="text-xl font-bold">Marketing Automation & Chatbots</h3>
+        </div>
+        <p class="mb-4">Streamline your marketing processes and engage customers in real-time with chatbots.</p>
+        <ul class="list-disc pl-5">
+          <li>CRM integration</li>
+          <li>Drip campaigns</li>
+          <li>Chatbot development</li>
+          <li>Lead nurturing</li>
+        </ul>
+      </div>
+  
+      <!-- eCommerce Solutions -->
+      <div class=" shadow-lg rounded-lg p-6 bg-[#2f43454d]">
+        <div class="flex items-center mb-4">
+          <span class="material-icons text-white text-4xl mr-3">shopping_cart</span>
+          <h3 class="text-xl font-bold">eCommerce Solutions</h3>
+        </div>
+        <p class="mb-4">Drive more sales with a fully integrated eCommerce platform.</p>
+        <ul class="list-disc pl-5">
+          <li>eCommerce website design</li>
+          <li>Payment integration</li>
+          <li>Inventory management</li>
+          <li>SEO for eCommerce</li>
+        </ul>
+      </div>
+        </div>
+      
+        <!-- Show More button -->
+        <div class="flex justify-center mt-10">
+          <button id="show-more-btn"  class="contact-button  bg-[#31ae90] px-[30px] py-2 rounded-md flex items-center gap-2 hover:bg-[#31ae90] hover:text-[white] transition-colors duration-300 ">Show More</button>
+        </div>
+    </div>
+    </div>
+
+     <!-- shorts -->
+     <div class="px-10">
+     <section class="container mx-auto  pt-20 py-5">
+        <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-[50px]"
+            data-aos="fade-up">Shorts by CIEL:</p>
+        <div class="reels-section grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ">
+            <!-- Reel 1 -->
+            <div
+                class="reel bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <video class="w-full h-94 object-cover" controls>
+                    <source src="./assets/images/reels-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+
+            <!-- Reel 2 -->
+            <div
+                class="reel bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <video class="w-full h-94 object-cover" controls>
+                    <source src="./assets/images/reels-2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+
+            <!-- Reel 3 -->
+            <div
+                class="reel bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <video class="w-full h-94 object-cover" controls>
+                    <source src="./assets/images/reels-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+
+            <!-- Reel 4 -->
+            <div
+                class="reel bg-gray-100 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+                <video class="w-full h-94 object-cover" controls>
+                    <source src="./assets/images/reels-2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- our partners -->
+    <div class="px-10">
+    <div class="container mx-auto py-20">
+        <p class="title font-extrabold text-[25px] sm:text-[25px] md:text-[30px] lg:text-[40px] mb-[50px]"
+            data-aos="fade-up">Our Partners:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
+            <div class="child w-full" data-aos="fade-up">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/google-ads.png" alt="Image 1">
+            </div>
+            <div class="child w-full " data-aos="fade-down">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/google-premier.png" alt="Image 2">
+            </div>
+            <div class="child w-full " data-aos="fade-up">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/amazon-badge.jpg" alt="Image 3">
+            </div>
+            <div class="child w-full " data-aos="fade-down">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/meta-business-partner.jpg" alt="Image 3">
+            </div>
+            <div class="child w-full bg-white rounded-lg" data-aos="fade-up">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/shopify-partner.png" alt="Image 2">
+            </div>
+            <div class="child w-full " data-aos="fade-down">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/Mailchimp partner.png" alt="Image 3">
+            </div>
+            <div class="child w-full " data-aos="fade-up">
+                <img class="w-full rounded-lg hover:scale-105 transition-transform duration-300 h-[90px]"
+                    src="./assets/images/hubspot.jpg" alt="Image 3">
+            </div>
+        </div>
+
+        <div class="flex gap-5 justify-center items-center mt-[50px]">
+            <a href="#blog">
+            <button data-aos="fade-up-down"
+                class="contact-button  bg-[#31ae90] px-[30px] py-2 rounded-md text-[18px] flex items-center gap-2  hover:text-[white] transition-colors duration-300 ">
+                <p class="font-medium">Contact our team for free consultation </p>
+            </button>
+            </a>
+        </div>
+        
+    </div>
+    </div>
+
+     <!-- footer -->
+     <footer class=" container mx-auto px-4 pb-[50px] pt-[20px]">
+        <div class="flex justify-center pb-[30px]">
+            <img src="./assets/images/footer-logo.png" class="h-[55px] w-auto " />
         </div>
         <hr class="pb-[20px] ">
         <div
@@ -209,6 +574,52 @@
         </div>
     </footer>
     <!-- footer -->
+
+    <script>
+        const showMoreBtn = document.getElementById('show-more-btn');
+        const moreCards = document.getElementById('more-cards');
+      
+        showMoreBtn.addEventListener('click', () => {
+          if (moreCards.classList.contains('hidden')) {
+            moreCards.classList.remove('hidden');
+            showMoreBtn.textContent = 'Show Less'; // Change the button text to "Show Less"
+            showMoreBtn.style.backgroundColor = '#31ae90';
+          } else {
+            moreCards.classList.add('hidden');
+            showMoreBtn.textContent = 'Show More'; // Change the button text back to "Show More"
+            showMoreBtn.style.backgroundColor = '#31ae90';
+          }
+        });
+      </script>
+
+    <script>
+        const headings = [
+            "Boost Your SEO Performance",
+            "Enhance Social Media Strategy",
+            "Maximize PPC Campaign Success",
+            "Increase Website Traffic & Leads",
+            "Grow Your Online Presence"
+        ];
+    
+        let currentHeadingIndex = 0;
+        const headingElement = document.getElementById('dynamic-heading');
+    
+        // Function to change heading with slide-up effect
+        const changeHeading = () => {
+            // Remove the animation class if it exists
+            headingElement.classList.remove('slide-up');
+    
+            // Wait a tiny bit before re-adding the class to trigger the animation
+            setTimeout(() => {
+                currentHeadingIndex = (currentHeadingIndex + 1) % headings.length;
+                headingElement.textContent = headings[currentHeadingIndex];
+                headingElement.classList.add('slide-up');  // Add animation class
+            }, 100);  // Small delay for smoother animation effect
+        };
+    
+        // Change the heading every 3 seconds
+        setInterval(changeHeading, 3000);  // Change heading every 3 seconds
+    </script>
 
 <!-- FAQ Section script -->
 <script>

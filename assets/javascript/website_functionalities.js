@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((data) => {
             // Generate blog posts
             const blogContainer = document.getElementById("blog-container");
-            data.slice(0, 3).forEach((blog) => {
+            data.slice(0,0).forEach((blog) => {
                 const blogPost = document.createElement("div");
                 blogPost.classList.add(
                     "bg-white",
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
 
                 blogPost.innerHTML = `
-            <div data-aos="fade-down">
+            <div data-aos="fade-down" class="blog-post">
               <img class="w-full h-48 object-cover rounded-t-lg" src="${blog.image}" alt="${blog.title}">
               <div class="p-6">
                 <h2 class="text-2xl text-black font-bold mb-2">${blog.title}</h2>
@@ -73,9 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 locationDiv.className = " min-w-[200px]  rounded-lg  relative ";
                 
                 locationDiv.innerHTML = `
-                    <div class="rounded-lg " style="background-color: ${location.bgColor}; height: 100px; position: absolute; width: 100%; bottom: 130px;"></div>
-                    <img src="${location.imgSrc}" class="rounded-lg h-[200px] absolute" data-aos="fade-down"/>
-                    <p class="text-white mt-[214px] location-title">${location.country}</p>
+                    <div class="rounded-lg " style="background-color: ${location.bgColor}; height: 200px; width: 100%; ">
+                    <img src="${location.imgSrc}" class="rounded-lg h-[200px] " data-aos="fade-down"/></div>
+                    
+                    <p class="text-white mt-[20px] location-title">${location.country}</p>
                     <p class="text-white mt-[10px] mb-[5px]">${location.address}</p>
                     <p class="text-[#ff9213]">${location.phone}</p>
                 `;
@@ -110,33 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
             hour12: true
         }).format(new Date());
     }
-
-
-    window.addEventListener('scroll', function () {
-
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-            logo.src = './assets/images/logoBlack.png'; // Update logo src for scrolled state
-        } else {
-            header.classList.remove('scrolled');
-            logo.src = './assets/images/logo.png'; // Revert logo src for default state
-        }
-
-    });
-
-    menuItems.forEach(item => {
-        item.addEventListener('mouseover', function () {
-            header.classList.add('scrolled');
-            logo.src = './assets/images/logoBlack.png'; // Add scrolled class on hover
-        });
-        item.addEventListener('mouseout', function () {
-            if (window.scrollY <= 50) {
-                header.classList.remove('scrolled');
-                logo.src = './assets/images/logo.png'; // Remove scrolled class if not scrolling
-            }
-        });
-    });
-
 
 });
 

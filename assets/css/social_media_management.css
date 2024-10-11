@@ -9,3 +9,43 @@
 .horizontal-timeline .timeline-cards:hover div {
     background-color: #31ae90;
 }
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-up {
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.active {
+    border-bottom: 4px solid  #31ae90;
+    color:  #31ae90;
+    font-weight: bold;
+    width: 300px;
+}
+.content-transition {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.content-show {
+    opacity: 1;
+}
+
+.paid-container div{
+    background-color:#2f43454d;
+    border-radius: 10px;
+    border: 0.3px solid #c4c4c447;
+   }
+
+   .paid-social-adss{
+    border: 1px dashed white;
+    border-radius: 10px;
+}
